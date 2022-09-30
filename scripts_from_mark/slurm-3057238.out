@@ -1,0 +1,12 @@
+Dec 18 13:49:59 ..... started STAR run
+Dec 18 13:49:59 ..... loading genome
+Dec 18 13:50:10 ..... processing annotations GTF
+Dec 18 13:50:23 ..... inserting junctions into the genome indices
+Dec 18 13:50:54 ..... started mapping
+Dec 18 14:28:53 ..... finished successfully
+/var/spool/slurm//job3057238/slurm_script: line 19: --twopassMode: command not found
+/var/spool/slurm//job3057238/slurm_script: line 20: --outSAMstrandField: command not found
+/var/spool/slurm//job3057238/slurm_script: line 24: --chimJunctionOverhangMin: command not found
+/var/spool/slurm//job3057238/slurm_script: line 26: --alignSJDBoverhangMin: command not found
+/var/spool/slurm//job3057238/slurm_script: line 28: --alignIntronMax: command not found
+/var/spool/slurm//job3057238/slurm_script: line 30: --outSAMattrRGline: command not found

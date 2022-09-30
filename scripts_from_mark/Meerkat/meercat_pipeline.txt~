@@ -1,0 +1,227 @@
+MER="/data/mark/tools/Meerkat"
+ALIGNED="/data/mark/tools/breakpoint_aln"
+DAT="/data/mark/tools/Meerkat/data"
+BWA="/data/mark/tools/bwa062"
+SAM="/data/mark/tools/samtools"
+BLAST="/data/mark/tools/blast-2.2.24/bin"
+REF="/data/mark/tools/ref"
+
+export LD_LIBRARY_PATH=/data/mark/tools/Meerkat/src/mybamtools/lib
+
+cd $ALIGNED
+
+for i in *.bam;
+do
+
+newfile=$(basename $i .bam)
+echo "$newfile"
+
+cp $ALIGNED/$newfile.bam $DAT/
+cp $ALIGNED/$newfile.bai $DAT/
+
+done
+
+cd $DAT
+
+for i in *.bam;
+do
+
+newfile=$(basename $i .bam)
+echo "$newfile"
+
+mkdir result_${newfile}
+
+cd /data/mark/tools/Meerkat/data/result_$newfile
+
+perl $MER/scripts/pre_process.pl -b $DAT/$newfile.bam -I $REF/hg19.fa -A $REF/hg19.fasta.fai -W $BWA -S $SAM -t 24 -l 0
+
+perl $MER/scripts/meerkat.pl -b $DAT/$newfile.bam -F $REF -W $BWA -B $BLAST -S $SAM -t 24 -l 0
+
+perl $MER/scripts/mechanism.pl -b $DAT/$newfile.bam -R $REF/rmsk-hg19.txt
+
+done
+
+cd /data/mark/tools/Meerkat/data
+
+DAT="/data/mark/tools/Meerkat/data"
+
+for i in *.variants;
+do
+
+newfile=$(basename $i .variants)
+echo "$newfile"
+
+awk -v OFS='\t' '{if ($1 == "del") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14;}' >> $DAT/${newfile}.smp_DEL.txt
+awk -v OFS='\t' '{if ($1 == "del_ins") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_DEL_INS.txt
+awk -v OFS='\t' '{if ($1 == "del_insod") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_DEL_INSOD.txt
+awk -v OFS='\t' '{if ($1 == "del_insou") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_DEL_INSOU.txt
+awk -v OFS='\t' '{if ($1 == "del_inss") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_DEL_INSS.txt
+awk -v OFS='\t' '{if ($1 == "del_inssd") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_DEL_INSSD.txt
+awk -v OFS='\t' '{if ($1 == "del_inssu") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_DEL_INSSU.txt
+awk -v OFS='\t' '{if ($1 == "del_invers") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16,$17}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17;}' >> $DAT/${newfile}.smp_DEL_INVERS.txt
+awk -v OFS='\t' '{if ($1 == "inss") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_INSS.txt
+awk -v OFS='\t' '{if ($1 == "inssd") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_INSSD.txt
+awk -v OFS='\t' '{if ($1 == "inssu") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_INSSU.txt 
+awk -v OFS='\t' '{if ($1 == "insod") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_INSOD.txt
+awk -v OFS='\t' '{if ($1 == "insou") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13,$14,$15,$16}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16;}' >> $DAT/${newfile}.smp_INSOU.txt
+awk -v OFS='\t' '{if ($1 == "invers") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11;}' >> $DAT/${newfile}.smp_INV.txt
+awk -v OFS='\t' '{if ($1 == "invers_f") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11;}' >> $DAT/${newfile}.smp_INVf.txt
+
+done
+
+for i in *.variants;
+do
+
+newfile=$(basename $i .variants)
+echo "$newfile"
+
+awk -v OFS='\t' '{if ($1 == "invers_r") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11;}' >> $DAT/${newfile}.smp_INVr.txt
+
+done
+
+for i in *.variants;
+do
+
+newfile=$(basename $i .variants)
+echo "$newfile"
+
+
+awk -v OFS='\t' '{if ($1 == "tandem_dup") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11;}' >> $DAT/${newfile}.smp_TANDEM_DUP.txt
+awk -v OFS='\t' '{if ($1 == "transl_inter") print $6,$7,$8,$1,$2,$3,$4,$5,$9,$10,$11,$12,$13}' $DAT/${newfile}.variants | awk -v OFS='\t' '{if ($2<$3) print; else print $1,$3,$2,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13;}' >> $DAT/${newfile}.smp_TRANSL_INTER.txt
+
+done
+
+for i in *.variants;
+do
+
+newfile=$(basename $i .variants)
+echo "$newfile"
+
+############ FILTER FILES BY LENGTH
+##a=$($SAM/samtools depth  $DAT/${newfile}.bam  |  awk '{sum+=$3} END { print "Average = ",sum/NR}')
+##b=$(awk "BEGIN {print $a/3}")
+b=2
+
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_DEL.txt | awk -v x=$b '$7 >= x' >> $DAT/${newfile}.smp_DEL_filtered.bed
+
+
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_DEL_INS.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk -v x=$b '$7 >= x' >> $DAT/${newfile}.smp_DEL_INS_filtered.bed
+
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_DEL_INSOD.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_DEL_INSOD_filtered.bed
+
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_DEL_INSOU.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_DEL_INSOU_filtered.bed
+
+
+
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_DEL_INSS.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_DEL_INSS_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_DEL_INSSD.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_DEL_INSSD_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_DEL_INSSU.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_DEL_INSSU_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_DEL_INVERS.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_DEL_INVERS_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_INSS.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_INSS_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_INSSD.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_INSSD_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_INSSU.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk -v x=$b '$7 >= x' >> $DAT/${newfile}.smp_INSSU_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_INSOD.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_INSOD_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_INSOU.txt | awk -v OFS='\t' '{if ($13 < -7000 || $13 > 7000) print}' | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_INSOU_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_INV.txt | awk '{sub(/\//," ",$7)};1' | awk -v x=$b '$7 >= x && $8 >= x' >> $DAT/${newfile}.smp_INV_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_INVf.txt | awk -v x=$b '$7 >= x' >> $DAT/${newfile}.smp_INVf_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_INVr.txt | awk -v x=$b '$7 >= x' >> $DAT/${newfile}.smp_INVr_filtered.bed
+awk -v OFS='\t' '{if ($9 < -7000 || $9 > 7000) print}' $DAT/${newfile}.smp_TANDEM_DUP.txt | awk -v x=$b '$7 >= x' >> $DAT/${newfile}.smp_TANDEM_DUP_filtered.bed
+
+done
+
+for i in *.variants;
+do
+
+newfile=$(basename $i .variants)
+echo "$newfile"
+
+awk -v x=$b '$7 >= x' $DAT/${newfile}.smp_TRANSL_INTER.txt | awk -v OFS='\t' '{print $1,$3,$3,$2,$4,$5,$6,$7,$8,$9,$10,$10,$11,$12,$13}' > $DAT/${newfile}.smp_TRANSL_INTER_filtered.bed
+
+done
+
+for i in *.variants;
+do
+
+newfile=$(basename $i .variants)
+echo "$newfile"
+
+
+/data/mark/tools/bedtools225/bin/bedtools intersect \
+	-a $DAT/${newfile}.smp_DEL_filtered.bed \
+	-b /data/mark/tools/ref/centromeric.bed /data/mark/tools/ref/genomicSuperDups2.bed \
+        -v > $DAT/${newfile}_DEL_filtered_final.txt
+
+
+
+
+
+/data/mark/tools/bedtools225/bin/bedtools intersect \
+	-a $DAT/${newfile}.smp_INVf_filtered.bed \
+	-b /data/mark/tools/ref/centromeric.bed /data/mark/tools/ref/genomicSuperDups2.bed \
+        -v > $DAT/${newfile}_INVf_filtered_final.txt
+
+
+
+/data/mark/tools/bedtools225/bin/bedtools intersect \
+	-a $DAT/${newfile}.smp_INVr_filtered.bed \
+	-b /data/mark/tools/ref/centromeric.bed /data/mark/tools/ref/genomicSuperDups2.bed \
+        -v > $DAT/${newfile}_INVr_filtered_final.txt
+
+/data/mark/tools/bedtools225/bin/bedtools intersect \
+	-a $DAT/${newfile}.smp_TANDEM_DUP_filtered.bed \
+	-b /data/mark/tools/ref/centromeric.bed /data/mark/tools/ref/genomicSuperDups2.bed \
+        -v > $DAT/${newfile}_TANDEM_DUP_filtered_final.txt
+
+/data/mark/tools/bedtools225/bin/bedtools intersect \
+	-a $DAT/${newfile}.smp_TRANSL_INTER_filtered.bed \
+	-b /data/mark/tools/ref/centromeric.bed /data/mark/tools/ref/genomicSuperDups2.bed \
+        -v > $DAT/${newfile}_TRANSL_INTER_filtered_chr1.bed
+
+awk -v OFS='\t' '{print $10,$11,$12,$1,$2,$3,$4,$5,$6,$7,$8,$9,$12,$13,$14,$15}' $DAT/${newfile}_TRANSL_INTER_filtered_chr1.bed > $DAT/${newfile}_TRANSL_INTER_filtered_chr2.bed
+
+/data/mark/tools/bedtools225/bin/bedtools intersect \
+	-a $DAT/${newfile}_TRANSL_INTER_filtered_chr2.bed \
+	-b /data/mark/tools/ref/centromeric.bed /data/mark/tools/ref/genomicSuperDups2.bed \
+        -v > $DAT/${newfile}_TRANSL_INTER_filtered_final.bed
+
+done
+
+rm $DAT/${newfile}.smp_DEL_filtered.bed
+rm $DAT/${newfile}.smp_DEL_INS_filtered.bed
+rm $DAT/${newfile}.smp_DEL_INSOD_filtered.bed
+rm $DAT/${newfile}.smp_DEL_INSOU_filtered.bed
+rm $DAT/${newfile}.smp_DEL_INSS_filtered.bed
+rm $DAT/${newfile}.smp_DEL_INSSD_filtered.bed
+rm $DAT/${newfile}.smp_DEL_INSSU_filtered.bed
+rm $DAT/${newfile}.smp_DEL_INVERS.txt
+rm $DAT/${newfile}.smp_INSS_filtered.bed
+rm $DAT/${newfile}.smp_INSSD_filtered.bed
+rm $DAT/${newfile}.smp_INSSU_filtered.bed
+rm $DAT/${newfile}.smp_INSOD_filtered.bed
+rm $DAT/${newfile}.smp_INSOU_filtered.bed
+rm $DAT/${newfile}.smp_INV_filtered.bed
+rm $DAT/${newfile}.smp_INVf_filtered.bed
+rm $DAT/${newfile}.smp_INVr_filtered.bed
+rm $DAT/${newfile}.smp_TANDEM_DUP_filtered.bed
+rm $DAT/${newfile}.smp_TRANSL_INTER_filtered.bed
+rm $DAT/${newfile}_TRANSL_INTER_filtered_chr2.bed
+rm $DAT/${newfile}_TRANSL_INTER_filtered_chr1.bed
+
+done
+
+MER="/data/mark/tools/Meerkat"
+
+for i in *.variants;
+do
+
+newfile=$(basename $i .variants)
+echo "$newfile"
+
+perl $MER/scripts/somatic_sv.pl -i $DAT/${newfile}.variants -o $DAT/${newfile}_somatic_filtered.variants
+
+done
+
+perl $MER/scripts/meerkat2vcf.pl -i $RAP/somatic_filtered.sample.sorted.nodup.variants -H /data/mark/tools/Meerkat/Meerkat.example/headerfile -F /data/mark/tools/ref/hg19.fasta -o $RAP/somatic_filtered.sample.sorted.nodup.variants.vcf
+
+perl $MER/scripts/fusions.pl -i $RAP/somatic_filtered.sample.sorted.nodup.variant -G /data/mark/tools/RAPTR-SV/genes.bed
+

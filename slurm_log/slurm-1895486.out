@@ -1,0 +1,88 @@
+[E::hts_open_format] Failed to open file /scratch/sduhumac/kristina/data/genova/plasma/output/G35-2_illumina-truseq-genome_H3YVTBGX2_sorted.bam
+samtools merge: fail to open "/scratch/sduhumac/kristina/data/genova/plasma/output/G35-2_illumina-truseq-genome_H3YVTBGX2_sorted.bam": No such file or directory
+INFO	2018-09-22 16:52:04	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -INPUT /scratch/sduhumac/kristina/data/genova/plasma/output/G35-2_illumina-truseq-genome_merged_sorted.bam -OUTPUT /scratch/sduhumac/kristina/data/genova/plasma/output/G35-2_illumina-truseq-genome_merged_sorted_nodup.bam -METRICS_FILE G35-2_illumina-truseq-genome_merged_dup.metrics -REMOVE_DUPLICATES TRUE -VALIDATION_STRINGENCY LENIENT -CREATE_INDEX true
+**********
+
+
+16:52:05.184 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/gpfs/gss1/work/sduhumac/kristina/tools/miniconda3/share/picard-2.18.14-0/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Sat Sep 22 16:52:05 CEST 2018] MarkDuplicates INPUT=[/scratch/sduhumac/kristina/data/genova/plasma/output/G35-2_illumina-truseq-genome_merged_sorted.bam] OUTPUT=/scratch/sduhumac/kristina/data/genova/plasma/output/G35-2_illumina-truseq-genome_merged_sorted_nodup.bam METRICS_FILE=G35-2_illumina-truseq-genome_merged_dup.metrics REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 22 16:52:05 CEST 2018] Executing as kmkoldby@s71p22.deic.sdu.dk on Linux 3.10.0-327.36.3.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.18.14-SNAPSHOT
+[Sat Sep 22 16:52:05 CEST 2018] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.00 minutes.
+Runtime.totalMemory()=514850816
+To get help, see http://broadinstitute.github.io/picard/index.html#GettingHelp
+Exception in thread "main" htsjdk.samtools.SAMException: Cannot read non-existent file: file:///scratch/sduhumac/kristina/data/genova/plasma/output/G35-2_illumina-truseq-genome_merged_sorted.bam
+	at htsjdk.samtools.util.IOUtil.assertFileIsReadable(IOUtil.java:430)
+	at htsjdk.samtools.util.IOUtil.assertFileIsReadable(IOUtil.java:417)
+	at htsjdk.samtools.util.IOUtil.assertInputIsValid(IOUtil.java:393)
+	at htsjdk.samtools.util.IOUtil.assertInputsAreValid(IOUtil.java:469)
+	at picard.sam.markduplicates.MarkDuplicates.doWork(MarkDuplicates.java:224)
+	at picard.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:295)
+	at picard.cmdline.PicardCommandLine.instanceMain(PicardCommandLine.java:103)
+	at picard.cmdline.PicardCommandLine.main(PicardCommandLine.java:113)
+Java memory size is set to 20G
+Launching application...
+
+QualiMap v.2.2.2-dev
+Built on 2017-08-28 08:37
+
+Selected tool: bamqc
+
+ERROR: input mapping file not found
+
+usage: qualimap bamqc -bam <arg> [-c] [-gd <arg>] [-gff <arg>] [-hm <arg>] [-ip]
+       [-nr <arg>] [-nt <arg>] [-nw <arg>] [-oc <arg>] [-os] [-outdir <arg>]
+       [-outfile <arg>] [-outformat <arg>] [-p <arg>] [-sd] [-sdmode <arg>]
+ -bam <arg>                           Input mapping file in BAM format
+ -c,--paint-chromosome-limits         Paint chromosome limits inside charts
+ -gd,--genome-gc-distr <arg>          Species to compare with genome GC
+                                      distribution. Possible values: HUMAN -
+                                      hg19; MOUSE - mm9(default), mm10
+ -gff,--feature-file <arg>            Feature file with regions of interest in
+                                      GFF/GTF or BED format
+ -hm <arg>                            Minimum size for a homopolymer to be
+                                      considered in indel analysis (default is
+                                      3)
+ -ip,--collect-overlap-pairs          Activate this option to collect statistics
+                                      of overlapping paired-end reads
+ -nr <arg>                            Number of reads analyzed in a chunk
+                                      (default is 1000)
+ -nt <arg>                            Number of threads (default is 24)
+ -nw <arg>                            Number of windows (default is 400)
+ -oc,--output-genome-coverage <arg>   File to save per base non-zero coverage.
+                                      Warning: large files are expected for
+                                      large genomes
+ -os,--outside-stats                  Report information for the regions outside
+                                      those defined by feature-file  (ignored
+                                      when -gff option is not set)
+ -outdir <arg>                        Output folder for HTML report and raw
+                                      data.
+ -outfile <arg>                       Output file for PDF report (default value
+                                      is report.pdf).
+ -outformat <arg>                     Format of the output report (PDF, HTML or
+                                      both PDF:HTML, default is HTML).
+ -p,--sequencing-protocol <arg>       Sequencing library protocol:
+                                      strand-specific-forward,
+                                      strand-specific-reverse or
+                                      non-strand-specific (default)
+ -sd,--skip-duplicated                Activate this option to skip duplicated
+                                      alignments from the analysis. If the
+                                      duplicates are not flagged in the BAM
+                                      file, then they will be detected by
+                                      Qualimap and can be selected for skipping.
+ -sdmode,--skip-dup-mode <arg>        Specific type of duplicated alignments to
+                                      skip (if this option is activated).
+                                      0 : only flagged duplicates (default)
+                                      1 : only estimated by Qualimap
+                                      2 : both flagged and estimated
+
+
+

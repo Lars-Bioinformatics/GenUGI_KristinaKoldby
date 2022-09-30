@@ -1,0 +1,18 @@
++ echo /work/sduhumac/kristina/scripts
+/work/sduhumac/kristina/scripts
++ cd /scratch/sduhumac/kristina/data/genova/plasma/output/qc/
++ multiqc . /work/sduhumac/kristina/data/genova/tumor_blood/output/qc/ --outdir /scratch/sduhumac/kristina/data/genova/plasma/output/qc/
+[INFO   ]         multiqc : This is MultiQC v1.6
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching '.'
+[INFO   ]         multiqc : Searching '/work/sduhumac/kristina/data/genova/tumor_blood/output/qc/'
+Searching 542 files..
+[INFO   ]        qualimap : Found 10 BamQC reports
+[INFO   ]          picard : Found 5 MarkDuplicates reports
+[INFO   ]          fastqc : Found 10 reports
+[INFO   ]         multiqc : Compressing plot data
+[WARNING]         multiqc : Previous MultiQC output found! Adjusting filenames..
+[WARNING]         multiqc : Use -f or --force to overwrite existing reports instead
+[INFO   ]         multiqc : Report      : ../../../../../../../../../../scratch/sduhumac/kristina/data/genova/plasma/output/qc/multiqc_report_3.html
+[INFO   ]         multiqc : Data        : ../../../../../../../../../../scratch/sduhumac/kristina/data/genova/plasma/output/qc/multiqc_data_3
+[INFO   ]         multiqc : MultiQC complete

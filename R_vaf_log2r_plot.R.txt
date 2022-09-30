@@ -1,0 +1,48 @@
+# setwd("T:\\projekter\\G45-2016-Genugi\\VAF_LogR_plots")
+# files <- list.files(path="T:\\projekter\\G45-2016-Genugi\\VAF_LogR_plots\\test", pattern="*ADmin4.txt", full.names=TRUE, recursive=FALSE)
+
+files <- list.files(path=".", pattern="*.txt", full.names=TRUE, recursive=FALSE)
+lapply(files, function(x) {
+
+data<-as.matrix(read.table(x,header=TRUE, sep="\t"))
+
+xval<-as.numeric(sub("%","",data[,3]))/100
+yval<-as.numeric(data[,4])
+
+png(paste(strsplit(x,".txt")[[1]],".png",sep=""))
+
+plot(xval,yval,xlab="AF",ylab="LOG2R",xlim=c(0,1),ylim=c(-3,3),pch=c(rep(18,length(xval))))
+abline(h=0,lwd=2)
+
+dev.off()
+
+rm(list=ls())
+
+})
+
+### Mutect use:
+xval<-as.numeric(data[,3])
+
+### Varscan use:
+xval<-as.numeric(sub("%","",data[,3]))/100
+
+
+# pdf(paste(strsplit(x,".txt")[[1]],".pdf",sep=""))
+
+#################################
+
+# rm(list=ls())
+# setwd("T:\\projekter\\G45-2016-Genugi\\VAF_LogR_plots")
+# data<-as.matrix(read.table("test_af_LOG2R_passed.txt",header=TRUE, sep="\t"))
+
+# xval<-as.numeric(data[,3])
+# yval<-as.numeric(data[,4])
+
+###par(mfrow=c(2,2))
+
+# tiff("test.tiff")
+
+# plot(xval,yval,xlab="AF",ylab="LOG2R",ylim=c(-2,2),pch=c(rep(17,length(xval))),col=c(rep("red",length(xval))))
+# abline(h=0,lwd=2)
+
+# dev.off()

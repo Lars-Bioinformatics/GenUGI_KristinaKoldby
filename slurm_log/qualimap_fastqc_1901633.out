@@ -1,0 +1,27 @@
++ echo /scratch/sduhumac/kristina/data/genova/plasma/output
+/scratch/sduhumac/kristina/data/genova/plasma/output
++ SAMPLEID=G35-1_illumina-truseq-genome_merged
++ OUTPUT=/scratch/sduhumac/kristina/data/genova/plasma/output
++ fastqc /scratch/sduhumac/kristina/data/genova/plasma/output/G35-1_illumina-truseq-genome_merged_sorted_nodup.bam -o /scratch/sduhumac/kristina/data/genova/plasma/output/qc/fastqc/
+Started analysis of G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 5% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 10% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 15% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 20% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 25% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 30% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 35% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 40% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 45% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 50% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 55% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 60% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 65% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 70% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 75% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 80% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 85% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 90% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 95% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Approx 100% complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam
+Analysis complete for G35-1_illumina-truseq-genome_merged_sorted_nodup.bam

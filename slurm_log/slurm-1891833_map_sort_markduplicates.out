@@ -1,0 +1,1962 @@
+java -Djava.library.path=/gpfs/gss1/work/sduhumac/kristina/tools/miniconda3/pkgs/bbmap-38.22-h470a237_0/opt/bbmap-38.22-0/jni/ -ea -Xmx20g -Xms20g -cp /gpfs/gss1/work/sduhumac/kristina/tools/miniconda3/pkgs/bbmap-38.22-h470a237_0/opt/bbmap-38.22-0/current/ jgi.BBDukF -Xmx20g in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_R1.fastq in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_R2.fastq out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq ref=/gpfs/gss1/work/sduhumac/kristina/tools/miniconda3/pkgs/bbmap-38.22-h470a237_0//opt/bbmap-38.22-0/resources/adapters.fa ktrim=r ktrim=l k=23 mink=11 hdist=1 tpe tbo qtrim=rl trimq=10 maq=10 minlen=25
+Executing jgi.BBDukF [-Xmx20g, in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_R1.fastq, in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_R2.fastq, out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq, out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq, ref=/gpfs/gss1/work/sduhumac/kristina/tools/miniconda3/pkgs/bbmap-38.22-h470a237_0//opt/bbmap-38.22-0/resources/adapters.fa, ktrim=r, ktrim=l, k=23, mink=11, hdist=1, tpe, tbo, qtrim=rl, trimq=10, maq=10, minlen=25]
+Version 38.22
+
+maskMiddle was disabled because useShortKmers=true
+0.024 seconds.
+Initial:
+Memory: max=20580m, total=20580m, free=19828m, used=752m
+
+Added 216529 kmers; time: 	0.198 seconds.
+Memory: max=20580m, total=20580m, free=18862m, used=1718m
+
+Input is being processed as paired
+Started output streams:	0.469 seconds.
+Processing time:   		82.082 seconds.
+
+Input:                  	284085056 reads 		11363402240 bases.
+QTrimmed:               	133467 reads (0.05%) 	2254792 bases (0.02%)
+KTrimmed:               	167438 reads (0.06%) 	2633885 bases (0.02%)
+Trimmed by overlap:     	0 reads (0.00%) 	0 bases (0.00%)
+Low quality discards:   	0 reads (0.00%) 	0 bases (0.00%)
+Total Removed:          	74550 reads (0.03%) 	4888677 bases (0.04%)
+Result:                 	284010506 reads (99.97%) 	11358513563 bases (99.96%)
+
+Time:                         	82.754 seconds.
+Reads Processed:        284m 	3432.87k reads/sec
+Bases Processed:      11363m 	137.31m bases/sec
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 6001496 sequences (240000039 bp)...
+[M::process] read 6001538 sequences (240000052 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (197, 1923613, 134, 44)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (117, 323, 553)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1425)
+[M::mem_pestat] mean and std.dev: (338.15, 268.04)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1861)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (93, 1098)
+[M::mem_pestat] mean and std.dev: (598.36, 150.51)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1299)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (362, 912, 2439)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6593)
+[M::mem_pestat] mean and std.dev: (1571.48, 1632.01)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8670)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (401, 640, 1105)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 2513)
+[M::mem_pestat] mean and std.dev: (718.83, 565.77)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 3217)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001496 reads in 2104.860 CPU sec, 119.754 real sec
+[M::process] read 6000910 sequences (240000056 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (216, 1932873, 125, 61)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (116, 338, 566)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1466)
+[M::mem_pestat] mean and std.dev: (338.77, 263.85)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1916)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (497, 591, 699)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (93, 1103)
+[M::mem_pestat] mean and std.dev: (601.15, 151.41)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1305)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (352, 977, 2530)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6886)
+[M::mem_pestat] mean and std.dev: (1549.35, 1501.75)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9064)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (377, 555, 2302)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6152)
+[M::mem_pestat] mean and std.dev: (1073.29, 1106.59)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8077)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001538 reads in 2108.005 CPU sec, 90.299 real sec
+[M::process] read 6000900 sequences (240000025 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (210, 1918507, 129, 54)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (149, 364, 522)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1268)
+[M::mem_pestat] mean and std.dev: (323.40, 225.31)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1641)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (494, 586, 693)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1091)
+[M::mem_pestat] mean and std.dev: (596.36, 149.20)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1290)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (486, 1256, 2773)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7347)
+[M::mem_pestat] mean and std.dev: (1695.24, 1691.90)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9634)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (434, 593, 1927)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4913)
+[M::mem_pestat] mean and std.dev: (1146.92, 1148.93)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6406)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000910 reads in 2106.052 CPU sec, 90.545 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (175, 1929972, 89, 48)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (152, 298, 567)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1397)
+[M::mem_pestat] mean and std.dev: (331.72, 243.16)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1812)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (598.57, 149.76)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (379, 976, 2381)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6385)
+[M::mem_pestat] mean and std.dev: (1452.68, 1358.56)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8387)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (464, 1049, 2079)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5309)
+[M::mem_pestat] mean and std.dev: (1392.28, 1245.92)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6924)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::process] read 6000856 sequences (240000053 bp)...
+[M::mem_process_seqs] Processed 6000900 reads in 2111.103 CPU sec, 90.688 real sec
+[M::process] read 6000950 sequences (240000072 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (189, 1924371, 117, 53)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (104, 285, 524)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1364)
+[M::mem_pestat] mean and std.dev: (312.77, 251.33)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1784)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (93, 1098)
+[M::mem_pestat] mean and std.dev: (598.31, 149.82)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1299)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (393, 1451, 2574)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6936)
+[M::mem_pestat] mean and std.dev: (1613.27, 1573.14)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9117)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (392, 697, 1969)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5123)
+[M::mem_pestat] mean and std.dev: (1185.02, 1099.89)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6700)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000856 reads in 2106.028 CPU sec, 90.544 real sec
+[M::process] read 6001518 sequences (240000018 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (166, 1929411, 122, 66)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (112, 360, 589)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1543)
+[M::mem_pestat] mean and std.dev: (330.84, 254.27)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2020)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 697)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (94, 1099)
+[M::mem_pestat] mean and std.dev: (599.11, 150.08)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1300)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (371, 918, 2420)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6518)
+[M::mem_pestat] mean and std.dev: (1343.25, 1316.64)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8567)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (409, 730, 2577)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6913)
+[M::mem_pestat] mean and std.dev: (1353.91, 1369.24)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9081)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000950 reads in 2094.228 CPU sec, 89.696 real sec
+[M::process] read 6001440 sequences (240000034 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (203, 1926605, 127, 78)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (128, 321, 531)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1337)
+[M::mem_pestat] mean and std.dev: (313.39, 230.65)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1740)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (494, 587, 694)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (94, 1094)
+[M::mem_pestat] mean and std.dev: (596.81, 149.65)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1294)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (483, 1468, 2535)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6639)
+[M::mem_pestat] mean and std.dev: (1622.59, 1505.77)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8691)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (277, 494, 1943)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5275)
+[M::mem_pestat] mean and std.dev: (1113.14, 1192.47)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6941)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001518 reads in 2108.283 CPU sec, 90.353 real sec
+[M::process] read 6000874 sequences (240000007 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (218, 1927591, 143, 57)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (128, 346, 532)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1340)
+[M::mem_pestat] mean and std.dev: (338.55, 235.65)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1744)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (93, 1098)
+[M::mem_pestat] mean and std.dev: (598.19, 149.90)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1299)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (471, 1579, 2667)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7059)
+[M::mem_pestat] mean and std.dev: (1676.60, 1648.75)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9255)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (405, 529, 1767)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4491)
+[M::mem_pestat] mean and std.dev: (948.07, 942.21)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5853)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001440 reads in 2101.749 CPU sec, 89.928 real sec
+[M::process] read 6000904 sequences (240000066 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (215, 1927083, 123, 67)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (109, 336, 536)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1390)
+[M::mem_pestat] mean and std.dev: (325.07, 260.21)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1817)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (493, 585, 691)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1087)
+[M::mem_pestat] mean and std.dev: (594.99, 148.50)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1285)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (498, 1867, 2994)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7986)
+[M::mem_pestat] mean and std.dev: (2039.79, 1865.30)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 10482)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (304, 573, 2141)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5815)
+[M::mem_pestat] mean and std.dev: (1153.20, 1177.42)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 7652)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000874 reads in 2095.358 CPU sec, 89.577 real sec
+[M::process] read 6000888 sequences (240000005 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (186, 1929844, 127, 52)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (164, 376, 535)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1277)
+[M::mem_pestat] mean and std.dev: (355.13, 234.03)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1648)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 695)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1095)
+[M::mem_pestat] mean and std.dev: (597.99, 149.86)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1295)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (357, 1587, 2662)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7272)
+[M::mem_pestat] mean and std.dev: (1669.28, 1485.66)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9577)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (408, 562, 2631)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7077)
+[M::mem_pestat] mean and std.dev: (1345.10, 1336.49)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9300)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000904 reads in 2109.802 CPU sec, 91.120 real sec
+[M::process] read 6000892 sequences (240000014 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (195, 1928985, 111, 54)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (135, 312, 521)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1293)
+[M::mem_pestat] mean and std.dev: (311.54, 219.21)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1679)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 587, 694)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1092)
+[M::mem_pestat] mean and std.dev: (597.24, 149.53)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1291)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (427, 1038, 2525)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6721)
+[M::mem_pestat] mean and std.dev: (1454.50, 1365.11)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8819)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (346, 771, 1753)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4567)
+[M::mem_pestat] mean and std.dev: (1188.06, 1003.76)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5974)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000888 reads in 2091.523 CPU sec, 89.434 real sec
+[M::process] read 6000912 sequences (240000037 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (185, 1934727, 122, 77)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (121, 334, 557)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1429)
+[M::mem_pestat] mean and std.dev: (334.76, 243.64)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1865)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (598.48, 149.21)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (367, 1325, 2457)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6637)
+[M::mem_pestat] mean and std.dev: (1507.06, 1474.66)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8727)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 676, 1997)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4999)
+[M::mem_pestat] mean and std.dev: (1243.76, 1161.90)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6500)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000892 reads in 2089.604 CPU sec, 89.609 real sec
+[M::process] read 6000934 sequences (240000078 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (183, 1934321, 141, 58)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (143, 364, 590)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1484)
+[M::mem_pestat] mean and std.dev: (385.03, 331.20)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1931)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 697)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (94, 1099)
+[M::mem_pestat] mean and std.dev: (599.28, 149.97)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1300)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (484, 1227, 2655)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6997)
+[M::mem_pestat] mean and std.dev: (1765.69, 1701.95)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9168)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (320, 496, 1065)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 2555)
+[M::mem_pestat] mean and std.dev: (679.91, 584.47)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 3300)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000912 reads in 2105.840 CPU sec, 90.051 real sec
+[M::process] read 6000902 sequences (240000009 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (198, 1925123, 116, 56)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (115, 324, 519)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1327)
+[M::mem_pestat] mean and std.dev: (311.89, 230.27)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1731)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (497, 590, 698)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1100)
+[M::mem_pestat] mean and std.dev: (600.28, 150.83)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1301)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (440, 1749, 2751)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7373)
+[M::mem_pestat] mean and std.dev: (1929.73, 1796.83)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9684)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (593, 1489, 2401)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6017)
+[M::mem_pestat] mean and std.dev: (1665.50, 1367.81)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 7825)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000934 reads in 2092.676 CPU sec, 89.559 real sec
+[M::process] read 6000888 sequences (240000063 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (206, 1931259, 120, 62)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (108, 318, 553)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1443)
+[M::mem_pestat] mean and std.dev: (328.45, 270.63)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1888)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (599.07, 149.66)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (399, 1054, 2277)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6033)
+[M::mem_pestat] mean and std.dev: (1437.50, 1392.68)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 7911)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (423, 901, 2444)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6486)
+[M::mem_pestat] mean and std.dev: (1504.58, 1398.28)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8507)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000902 reads in 2097.455 CPU sec, 90.350 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (200, 1922105, 130, 58)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (154, 338, 559)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1369)
+[M::mem_pestat] mean and std.dev: (338.88, 252.07)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1774)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 697)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (94, 1099)
+[M::mem_pestat] mean and std.dev: (599.57, 150.41)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1300)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (340, 842, 2292)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6196)
+[M::mem_pestat] mean and std.dev: (1369.41, 1410.60)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8148)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (524, 1201, 2542)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6578)
+[M::mem_pestat] mean and std.dev: (1603.70, 1451.33)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8596)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::process] read 6000896 sequences (240000023 bp)...
+[M::mem_process_seqs] Processed 6000888 reads in 2092.823 CPU sec, 89.719 real sec
+[M::process] read 6000926 sequences (240000018 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (211, 1931787, 115, 58)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (143, 366, 566)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1412)
+[M::mem_pestat] mean and std.dev: (345.66, 233.69)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1835)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (497, 590, 698)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1100)
+[M::mem_pestat] mean and std.dev: (600.41, 150.51)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1301)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (488, 1535, 2410)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6254)
+[M::mem_pestat] mean and std.dev: (1495.40, 1248.89)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8176)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (342, 522, 973)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 2235)
+[M::mem_pestat] mean and std.dev: (527.50, 391.64)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2866)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000896 reads in 2099.983 CPU sec, 90.830 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (192, 1926176, 128, 48)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (111, 324, 530)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1368)
+[M::mem_pestat] mean and std.dev: (317.92, 213.37)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1787)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 697)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (94, 1099)
+[M::mem_pestat] mean and std.dev: (599.56, 150.42)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1300)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (507, 1647, 2781)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7329)
+[M::mem_pestat] mean and std.dev: (1908.56, 1848.03)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9603)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (406, 649, 1782)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4534)
+[M::mem_pestat] mean and std.dev: (1086.74, 1016.78)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5910)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::process] read 6000906 sequences (240000006 bp)...
+[M::mem_process_seqs] Processed 6000926 reads in 2095.190 CPU sec, 89.592 real sec
+[M::process] read 6000910 sequences (240000064 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (232, 1931334, 102, 54)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (119, 385, 597)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1553)
+[M::mem_pestat] mean and std.dev: (370.08, 272.73)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2031)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 587, 694)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1092)
+[M::mem_pestat] mean and std.dev: (596.65, 148.85)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1291)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (460, 1580, 2395)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6265)
+[M::mem_pestat] mean and std.dev: (1546.72, 1386.89)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8200)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (487, 849, 1782)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4372)
+[M::mem_pestat] mean and std.dev: (1288.17, 1165.73)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5951)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000906 reads in 2094.272 CPU sec, 90.285 real sec
+[M::process] read 6000876 sequences (240000029 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (197, 1925210, 116, 48)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (99, 294, 509)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1329)
+[M::mem_pestat] mean and std.dev: (314.59, 260.32)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1739)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 695)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1095)
+[M::mem_pestat] mean and std.dev: (598.26, 149.67)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1295)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (344, 885, 2288)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6176)
+[M::mem_pestat] mean and std.dev: (1322.47, 1366.69)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8120)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (406, 648, 2298)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6082)
+[M::mem_pestat] mean and std.dev: (1248.82, 1221.97)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 7974)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000910 reads in 2096.326 CPU sec, 89.560 real sec
+[M::process] read 6000862 sequences (240000058 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (204, 1930509, 139, 60)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (122, 255, 487)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1217)
+[M::mem_pestat] mean and std.dev: (301.69, 233.86)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1582)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 587, 693)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (99, 1089)
+[M::mem_pestat] mean and std.dev: (596.89, 148.59)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1287)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (500, 1793, 2591)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6773)
+[M::mem_pestat] mean and std.dev: (1793.13, 1575.76)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8864)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (390, 649, 1534)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3822)
+[M::mem_pestat] mean and std.dev: (901.16, 780.29)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 4966)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000876 reads in 2085.978 CPU sec, 89.452 real sec
+[M::process] read 6000912 sequences (240000038 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (192, 1921945, 149, 56)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (129, 283, 524)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1314)
+[M::mem_pestat] mean and std.dev: (299.86, 236.42)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1709)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 695)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1095)
+[M::mem_pestat] mean and std.dev: (598.00, 149.42)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1295)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (406, 1755, 3560)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9868)
+[M::mem_pestat] mean and std.dev: (2363.00, 2443.99)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13022)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (497, 977, 3206)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 8624)
+[M::mem_pestat] mean and std.dev: (1732.30, 1659.13)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 11333)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000862 reads in 2110.709 CPU sec, 90.575 real sec
+[M::process] read 6001218 sequences (240000074 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (196, 1931118, 129, 52)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (115, 358, 589)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1537)
+[M::mem_pestat] mean and std.dev: (362.43, 289.25)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2011)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (598.92, 149.80)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (346, 1366, 2807)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7729)
+[M::mem_pestat] mean and std.dev: (1704.02, 1705.85)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 10190)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (342, 594, 1461)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3699)
+[M::mem_pestat] mean and std.dev: (802.13, 776.04)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 4818)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000912 reads in 2106.230 CPU sec, 90.103 real sec
+[M::process] read 6001436 sequences (240000069 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (189, 1927829, 138, 53)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (133, 342, 539)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1351)
+[M::mem_pestat] mean and std.dev: (310.49, 218.54)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1757)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 590, 698)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (92, 1102)
+[M::mem_pestat] mean and std.dev: (599.94, 150.68)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1304)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (497, 1352, 2659)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6983)
+[M::mem_pestat] mean and std.dev: (1776.34, 1687.03)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9145)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (389, 582, 957)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 2093)
+[M::mem_pestat] mean and std.dev: (649.45, 443.10)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2661)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001218 reads in 2099.132 CPU sec, 89.975 real sec
+[M::process] read 6001158 sequences (240000004 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (198, 1927913, 121, 47)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (123, 371, 571)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1467)
+[M::mem_pestat] mean and std.dev: (348.29, 262.98)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1915)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (598.84, 150.14)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (478, 1238, 2462)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6430)
+[M::mem_pestat] mean and std.dev: (1676.55, 1630.47)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8414)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (327, 623, 1495)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3831)
+[M::mem_pestat] mean and std.dev: (746.38, 668.41)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 4999)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001436 reads in 2104.754 CPU sec, 89.987 real sec
+[M::process] read 6000888 sequences (240000021 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (197, 1930145, 130, 54)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (121, 347, 570)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1468)
+[M::mem_pestat] mean and std.dev: (342.90, 263.61)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1917)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 695)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1095)
+[M::mem_pestat] mean and std.dev: (597.62, 149.08)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1295)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (347, 1202, 2380)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6446)
+[M::mem_pestat] mean and std.dev: (1460.19, 1451.69)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8479)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (395, 745, 1985)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5165)
+[M::mem_pestat] mean and std.dev: (1267.34, 1226.14)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6755)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001158 reads in 2112.460 CPU sec, 90.262 real sec
+[M::process] read 6000914 sequences (240000000 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (201, 1922837, 127, 61)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (98, 267, 522)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1370)
+[M::mem_pestat] mean and std.dev: (308.18, 235.82)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1794)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 695)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1095)
+[M::mem_pestat] mean and std.dev: (597.83, 149.39)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1295)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (464, 1224, 2405)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6287)
+[M::mem_pestat] mean and std.dev: (1562.57, 1425.61)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8228)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (384, 601, 1613)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4071)
+[M::mem_pestat] mean and std.dev: (896.45, 810.19)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5300)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000888 reads in 2101.794 CPU sec, 89.895 real sec
+[M::process] read 6000896 sequences (240000078 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (190, 1927239, 122, 45)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (144, 335, 551)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1365)
+[M::mem_pestat] mean and std.dev: (344.60, 270.88)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1772)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 587, 694)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1092)
+[M::mem_pestat] mean and std.dev: (597.05, 148.88)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1291)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (430, 1633, 2419)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6397)
+[M::mem_pestat] mean and std.dev: (1646.06, 1448.51)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8386)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (392, 592, 1697)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4307)
+[M::mem_pestat] mean and std.dev: (869.44, 669.92)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5612)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000914 reads in 2096.316 CPU sec, 89.782 real sec
+[M::process] read 6001234 sequences (240000057 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (174, 1924585, 127, 61)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (87, 279, 488)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1290)
+[M::mem_pestat] mean and std.dev: (290.99, 241.39)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1691)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 588, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (598.63, 150.03)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (323, 871, 2465)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6749)
+[M::mem_pestat] mean and std.dev: (1515.83, 1607.12)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8891)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (406, 684, 2047)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5329)
+[M::mem_pestat] mean and std.dev: (1211.08, 1070.98)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6970)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000896 reads in 2104.162 CPU sec, 90.032 real sec
+[M::process] read 6001412 sequences (240000021 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (195, 1932900, 119, 47)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (101, 296, 503)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1307)
+[M::mem_pestat] mean and std.dev: (297.45, 219.78)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1709)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (598.83, 149.86)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (379, 925, 2313)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6181)
+[M::mem_pestat] mean and std.dev: (1376.24, 1333.61)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8115)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (323, 624, 1958)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5228)
+[M::mem_pestat] mean and std.dev: (1154.49, 1209.31)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6863)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001234 reads in 2092.828 CPU sec, 89.774 real sec
+[M::process] read 6001142 sequences (240000072 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (206, 1927565, 111, 66)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (122, 372, 590)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1526)
+[M::mem_pestat] mean and std.dev: (341.79, 245.79)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1994)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 695)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1095)
+[M::mem_pestat] mean and std.dev: (597.77, 149.75)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1295)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (407, 923, 2308)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6110)
+[M::mem_pestat] mean and std.dev: (1414.41, 1350.85)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8011)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (378, 678, 1705)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4359)
+[M::mem_pestat] mean and std.dev: (1014.87, 1001.67)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5686)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001412 reads in 2106.028 CPU sec, 90.126 real sec
+[M::process] read 6000924 sequences (240000050 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (199, 1932736, 133, 65)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (109, 329, 583)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1531)
+[M::mem_pestat] mean and std.dev: (355.04, 310.54)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2005)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (494, 587, 693)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1091)
+[M::mem_pestat] mean and std.dev: (596.42, 148.84)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1290)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (393, 1230, 2639)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7131)
+[M::mem_pestat] mean and std.dev: (1639.36, 1533.48)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9377)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (468, 823, 2950)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7914)
+[M::mem_pestat] mean and std.dev: (1681.58, 1737.37)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 10396)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6001142 reads in 2095.569 CPU sec, 89.911 real sec
+[M::process] read 6000950 sequences (240000051 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (209, 1926242, 119, 61)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (124, 386, 601)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1555)
+[M::mem_pestat] mean and std.dev: (357.88, 258.27)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2032)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (494, 587, 693)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1091)
+[M::mem_pestat] mean and std.dev: (596.61, 149.02)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1290)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (503, 1683, 2770)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7304)
+[M::mem_pestat] mean and std.dev: (1710.13, 1547.65)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9571)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (456, 566, 1626)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3966)
+[M::mem_pestat] mean and std.dev: (926.36, 858.74)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5136)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000924 reads in 2091.734 CPU sec, 89.426 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (207, 1930566, 122, 59)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (114, 347, 542)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1398)
+[M::mem_pestat] mean and std.dev: (322.35, 233.44)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1826)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (494, 587, 693)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1091)
+[M::mem_pestat] mean and std.dev: (596.36, 148.61)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1290)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (355, 921, 2512)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6826)
+[M::mem_pestat] mean and std.dev: (1567.53, 1612.58)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8983)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (394, 572, 1402)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3418)
+[M::mem_pestat] mean and std.dev: (773.61, 627.49)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 4426)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::process] read 6000912 sequences (240000009 bp)...
+[M::mem_process_seqs] Processed 6000950 reads in 2095.012 CPU sec, 89.533 real sec
+[M::process] read 6000908 sequences (240000021 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (201, 1925979, 123, 63)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (130, 341, 533)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1339)
+[M::mem_pestat] mean and std.dev: (325.07, 224.42)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1742)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 587, 694)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1092)
+[M::mem_pestat] mean and std.dev: (597.45, 149.72)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1291)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (466, 1115, 2630)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6958)
+[M::mem_pestat] mean and std.dev: (1674.06, 1603.48)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9122)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (461, 765, 1355)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3143)
+[M::mem_pestat] mean and std.dev: (900.75, 688.93)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 4037)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000912 reads in 2102.486 CPU sec, 90.799 real sec
+[M::process] read 6000946 sequences (240000066 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (180, 1925881, 120, 59)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (106, 283, 540)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1408)
+[M::mem_pestat] mean and std.dev: (311.85, 264.06)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1842)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 695)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1095)
+[M::mem_pestat] mean and std.dev: (597.91, 149.73)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1295)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (514, 1870, 2659)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6949)
+[M::mem_pestat] mean and std.dev: (1864.57, 1643.18)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9094)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (464, 570, 1508)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3596)
+[M::mem_pestat] mean and std.dev: (919.72, 741.44)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 4640)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000908 reads in 2102.003 CPU sec, 89.678 real sec
+[M::process] read 6000962 sequences (240000037 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (203, 1930623, 143, 58)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (136, 333, 519)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1285)
+[M::mem_pestat] mean and std.dev: (322.22, 223.01)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1668)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (497, 590, 697)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1097)
+[M::mem_pestat] mean and std.dev: (599.76, 150.06)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1297)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (514, 1112, 2635)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6877)
+[M::mem_pestat] mean and std.dev: (1594.52, 1523.91)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8998)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (377, 762, 1830)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4736)
+[M::mem_pestat] mean and std.dev: (1039.09, 849.39)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6189)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000946 reads in 2095.583 CPU sec, 89.665 real sec
+[M::process] read 6000930 sequences (240000046 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (205, 1927025, 139, 64)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (107, 298, 556)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1454)
+[M::mem_pestat] mean and std.dev: (301.18, 233.69)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1903)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 588, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (598.39, 149.39)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (785, 1989, 3528)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9014)
+[M::mem_pestat] mean and std.dev: (2323.44, 2046.79)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 11757)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (447, 744, 2102)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5412)
+[M::mem_pestat] mean and std.dev: (1059.75, 973.01)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 7067)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000962 reads in 2098.051 CPU sec, 90.362 real sec
+[M::process] read 6000968 sequences (240000037 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (197, 1926337, 111, 49)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (134, 349, 553)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1391)
+[M::mem_pestat] mean and std.dev: (333.48, 228.28)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1810)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 695)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1095)
+[M::mem_pestat] mean and std.dev: (597.88, 149.43)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1295)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (294, 915, 2320)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6372)
+[M::mem_pestat] mean and std.dev: (1315.49, 1207.49)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8398)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (443, 686, 2277)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5945)
+[M::mem_pestat] mean and std.dev: (1215.09, 1200.17)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 7779)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000930 reads in 2106.304 CPU sec, 90.107 real sec
+[M::process] read 6000920 sequences (240000059 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (195, 1925018, 136, 61)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (119, 322, 534)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1364)
+[M::mem_pestat] mean and std.dev: (323.43, 234.18)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1779)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 589, 697)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (94, 1099)
+[M::mem_pestat] mean and std.dev: (599.68, 150.42)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1300)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (370, 1328, 2518)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6814)
+[M::mem_pestat] mean and std.dev: (1476.28, 1404.40)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8962)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (444, 732, 2559)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6789)
+[M::mem_pestat] mean and std.dev: (1513.22, 1499.66)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8904)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000968 reads in 2093.776 CPU sec, 89.738 real sec
+[M::process] read 6000948 sequences (240000072 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (200, 1928966, 158, 67)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (124, 310, 577)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1483)
+[M::mem_pestat] mean and std.dev: (332.90, 249.56)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1936)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (497, 590, 698)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (95, 1100)
+[M::mem_pestat] mean and std.dev: (600.03, 150.67)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1301)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (382, 1252, 2370)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6346)
+[M::mem_pestat] mean and std.dev: (1490.75, 1365.67)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8334)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (398, 568, 1041)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 2327)
+[M::mem_pestat] mean and std.dev: (740.11, 555.72)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2970)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000920 reads in 2091.805 CPU sec, 89.648 real sec
+[M::process] read 6000954 sequences (240000000 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (209, 1925926, 143, 44)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (123, 366, 682)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1800)
+[M::mem_pestat] mean and std.dev: (369.77, 311.67)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2359)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (496, 588, 696)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1096)
+[M::mem_pestat] mean and std.dev: (598.37, 149.67)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1296)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (425, 1327, 3297)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9041)
+[M::mem_pestat] mean and std.dev: (2226.23, 2329.02)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 11913)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (393, 947, 3382)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9360)
+[M::mem_pestat] mean and std.dev: (1947.09, 2056.57)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 12349)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000948 reads in 2091.391 CPU sec, 89.525 real sec
+[M::process] read 6000938 sequences (240000050 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (201, 1928550, 130, 53)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (108, 359, 601)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1587)
+[M::mem_pestat] mean and std.dev: (344.29, 273.59)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2080)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 588, 694)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1092)
+[M::mem_pestat] mean and std.dev: (597.27, 148.83)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1291)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (593, 1507, 2636)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6722)
+[M::mem_pestat] mean and std.dev: (1637.13, 1344.70)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8765)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (342, 612, 1661)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4299)
+[M::mem_pestat] mean and std.dev: (1063.87, 1066.88)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5618)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000954 reads in 2087.927 CPU sec, 89.606 real sec
+[M::process] read 6000952 sequences (240000027 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (159, 1923442, 133, 58)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (120, 325, 549)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1407)
+[M::mem_pestat] mean and std.dev: (330.46, 242.39)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1836)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (494, 587, 693)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (96, 1091)
+[M::mem_pestat] mean and std.dev: (596.75, 149.10)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1290)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (513, 1929, 3061)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 8157)
+[M::mem_pestat] mean and std.dev: (2137.43, 1969.94)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 10705)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (469, 776, 1690)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4132)
+[M::mem_pestat] mean and std.dev: (1106.95, 974.14)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5353)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000938 reads in 2095.348 CPU sec, 89.816 real sec
+[M::process] read 6000914 sequences (240000044 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (178, 1927941, 136, 46)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (109, 334, 568)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1486)
+[M::mem_pestat] mean and std.dev: (335.20, 259.92)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1945)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (494, 586, 692)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (98, 1088)
+[M::mem_pestat] mean and std.dev: (595.56, 147.95)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1286)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (354, 895, 2429)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6579)
+[M::mem_pestat] mean and std.dev: (1500.27, 1564.61)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8654)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (471, 748, 1678)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4092)
+[M::mem_pestat] mean and std.dev: (1131.67, 993.28)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5299)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000952 reads in 2086.031 CPU sec, 89.263 real sec
+[M::process] read 6000912 sequences (240000037 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (183, 1924123, 120, 63)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (142, 351, 533)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1315)
+[M::mem_pestat] mean and std.dev: (339.55, 239.08)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1706)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 587, 694)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1092)
+[M::mem_pestat] mean and std.dev: (597.40, 149.48)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1291)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (413, 1589, 2829)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7661)
+[M::mem_pestat] mean and std.dev: (1803.03, 1699.19)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 10077)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (429, 646, 2297)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6033)
+[M::mem_pestat] mean and std.dev: (1352.84, 1314.86)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 7901)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000914 reads in 2093.685 CPU sec, 89.633 real sec
+[M::process] read 1963080 sequences (78511697 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (204, 1931504, 136, 65)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (120, 334, 579)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1497)
+[M::mem_pestat] mean and std.dev: (344.91, 275.90)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1956)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 587, 694)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (97, 1092)
+[M::mem_pestat] mean and std.dev: (597.12, 149.02)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1291)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (491, 1408, 2564)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6710)
+[M::mem_pestat] mean and std.dev: (1614.88, 1550.26)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8783)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (369, 591, 1426)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3540)
+[M::mem_pestat] mean and std.dev: (868.56, 830.54)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 4597)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 6000912 reads in 2087.118 CPU sec, 89.238 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (67, 632864, 34, 28)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (133, 384, 603)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1543)
+[M::mem_pestat] mean and std.dev: (382.17, 271.68)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2013)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (495, 587, 693)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (99, 1089)
+[M::mem_pestat] mean and std.dev: (596.36, 148.44)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1287)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (401, 1783, 2618)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7052)
+[M::mem_pestat] mean and std.dev: (1760.30, 1537.58)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9269)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (381, 616, 1666)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4236)
+[M::mem_pestat] mean and std.dev: (958.54, 943.23)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5521)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 1963080 reads in 698.876 CPU sec, 30.510 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 24 -M -R @RG\tID:${SAMPLEID}.lib.run\tLB:${SAMPLEID}.lib\tPL:ILLUMINA\tSM:${SAMPLEID} /gpfs/gss1/work/sduhumac/tools/ref/hg19.fa /gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq /gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq
+[main] Real time: 4312.924 sec; CPU: 99345.361 sec
+[bam_sort_core] merging from 79 files and 1 in-memory blocks...
+INFO	2018-09-18 18:57:53	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -INPUT /gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/output/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_sorted.bam -OUTPUT /gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/output/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_sorted_nodup.bam -METRICS_FILE G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_dup.metrics -REMOVE_DUPLICATES TRUE -VALIDATION_STRINGENCY LENIENT -CREATE_INDEX true
+**********
+
+
+18:57:54.431 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/gpfs/gss1/work/sduhumac/kristina/tools/miniconda3/share/picard-2.18.14-0/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Tue Sep 18 18:57:54 CEST 2018] MarkDuplicates INPUT=[/gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/output/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_sorted.bam] OUTPUT=/gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/output/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_sorted_nodup.bam METRICS_FILE=G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_dup.metrics REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Tue Sep 18 18:57:54 CEST 2018] Executing as kmkoldby@s71p19.deic.sdu.dk on Linux 3.10.0-327.36.3.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.18.14-SNAPSHOT
+INFO	2018-09-18 18:57:54	MarkDuplicates	Start of doWork freeMemory: 502568168; totalMemory: 514850816; maxMemory: 954728448
+INFO	2018-09-18 18:57:54	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2018-09-18 18:57:54	MarkDuplicates	Will retain up to 3459161 data points before spilling to disk.
+INFO	2018-09-18 18:57:59	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:04s.  Time for last 1,000,000:    4s.  Last read position: chr1:5,269,231
+INFO	2018-09-18 18:57:59	MarkDuplicates	Tracking 3074 as yet unmatched pairs. 251 records in RAM.
+INFO	2018-09-18 18:58:03	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:08s.  Time for last 1,000,000:    4s.  Last read position: chr1:16,980,702
+INFO	2018-09-18 18:58:03	MarkDuplicates	Tracking 11862 as yet unmatched pairs. 1083 records in RAM.
+INFO	2018-09-18 18:58:12	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:17s.  Time for last 1,000,000:    8s.  Last read position: chr1:26,944,237
+INFO	2018-09-18 18:58:12	MarkDuplicates	Tracking 19590 as yet unmatched pairs. 1646 records in RAM.
+INFO	2018-09-18 18:58:22	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:28s.  Time for last 1,000,000:   10s.  Last read position: chr1:38,650,617
+INFO	2018-09-18 18:58:22	MarkDuplicates	Tracking 27574 as yet unmatched pairs. 2138 records in RAM.
+INFO	2018-09-18 18:58:29	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:00:34s.  Time for last 1,000,000:    6s.  Last read position: chr1:47,163,115
+INFO	2018-09-18 18:58:29	MarkDuplicates	Tracking 34706 as yet unmatched pairs. 2470 records in RAM.
+INFO	2018-09-18 18:58:35	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:00:40s.  Time for last 1,000,000:    5s.  Last read position: chr1:56,921,426
+INFO	2018-09-18 18:58:35	MarkDuplicates	Tracking 40086 as yet unmatched pairs. 2708 records in RAM.
+INFO	2018-09-18 18:58:45	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:00:50s.  Time for last 1,000,000:   10s.  Last read position: chr1:66,595,178
+INFO	2018-09-18 18:58:45	MarkDuplicates	Tracking 44488 as yet unmatched pairs. 2870 records in RAM.
+INFO	2018-09-18 18:58:52	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:00:57s.  Time for last 1,000,000:    7s.  Last read position: chr1:76,155,142
+INFO	2018-09-18 18:58:52	MarkDuplicates	Tracking 48174 as yet unmatched pairs. 2987 records in RAM.
+INFO	2018-09-18 18:59:00	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:01:05s.  Time for last 1,000,000:    7s.  Last read position: chr1:85,539,572
+INFO	2018-09-18 18:59:00	MarkDuplicates	Tracking 51924 as yet unmatched pairs. 3072 records in RAM.
+INFO	2018-09-18 18:59:05	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:01:10s.  Time for last 1,000,000:    5s.  Last read position: chr1:94,860,880
+INFO	2018-09-18 18:59:05	MarkDuplicates	Tracking 60574 as yet unmatched pairs. 3492 records in RAM.
+INFO	2018-09-18 18:59:12	MarkDuplicates	Read    11,000,000 records.  Elapsed time: 00:01:17s.  Time for last 1,000,000:    6s.  Last read position: chr1:104,311,552
+INFO	2018-09-18 18:59:12	MarkDuplicates	Tracking 64246 as yet unmatched pairs. 3528 records in RAM.
+INFO	2018-09-18 18:59:18	MarkDuplicates	Read    12,000,000 records.  Elapsed time: 00:01:23s.  Time for last 1,000,000:    5s.  Last read position: chr1:113,892,297
+INFO	2018-09-18 18:59:18	MarkDuplicates	Tracking 68772 as yet unmatched pairs. 3498 records in RAM.
+INFO	2018-09-18 18:59:26	MarkDuplicates	Read    13,000,000 records.  Elapsed time: 00:01:31s.  Time for last 1,000,000:    8s.  Last read position: chr1:121,484,100
+INFO	2018-09-18 18:59:26	MarkDuplicates	Tracking 109630 as yet unmatched pairs. 37322 records in RAM.
+INFO	2018-09-18 18:59:34	MarkDuplicates	Read    14,000,000 records.  Elapsed time: 00:01:39s.  Time for last 1,000,000:    7s.  Last read position: chr1:142,635,421
+INFO	2018-09-18 18:59:34	MarkDuplicates	Tracking 84132 as yet unmatched pairs. 3632 records in RAM.
+INFO	2018-09-18 18:59:41	MarkDuplicates	Read    15,000,000 records.  Elapsed time: 00:01:47s.  Time for last 1,000,000:    7s.  Last read position: chr1:150,676,253
+INFO	2018-09-18 18:59:41	MarkDuplicates	Tracking 89854 as yet unmatched pairs. 3386 records in RAM.
+INFO	2018-09-18 18:59:49	MarkDuplicates	Read    16,000,000 records.  Elapsed time: 00:01:54s.  Time for last 1,000,000:    7s.  Last read position: chr1:158,569,777
+INFO	2018-09-18 18:59:49	MarkDuplicates	Tracking 96794 as yet unmatched pairs. 3256 records in RAM.
+INFO	2018-09-18 18:59:54	MarkDuplicates	Read    17,000,000 records.  Elapsed time: 00:01:59s.  Time for last 1,000,000:    5s.  Last read position: chr1:165,349,666
+INFO	2018-09-18 18:59:54	MarkDuplicates	Tracking 100736 as yet unmatched pairs. 3155 records in RAM.
+INFO	2018-09-18 19:00:01	MarkDuplicates	Read    18,000,000 records.  Elapsed time: 00:02:06s.  Time for last 1,000,000:    7s.  Last read position: chr1:172,162,481
+INFO	2018-09-18 19:00:01	MarkDuplicates	Tracking 104624 as yet unmatched pairs. 3017 records in RAM.
+INFO	2018-09-18 19:00:09	MarkDuplicates	Read    19,000,000 records.  Elapsed time: 00:02:14s.  Time for last 1,000,000:    7s.  Last read position: chr1:179,031,416
+INFO	2018-09-18 19:00:09	MarkDuplicates	Tracking 108428 as yet unmatched pairs. 2867 records in RAM.
+INFO	2018-09-18 19:00:14	MarkDuplicates	Read    20,000,000 records.  Elapsed time: 00:02:19s.  Time for last 1,000,000:    5s.  Last read position: chr1:186,520,016
+INFO	2018-09-18 19:00:14	MarkDuplicates	Tracking 112838 as yet unmatched pairs. 2674 records in RAM.
+INFO	2018-09-18 19:00:21	MarkDuplicates	Read    21,000,000 records.  Elapsed time: 00:02:27s.  Time for last 1,000,000:    7s.  Last read position: chr1:193,863,303
+INFO	2018-09-18 19:00:21	MarkDuplicates	Tracking 115792 as yet unmatched pairs. 2536 records in RAM.
+INFO	2018-09-18 19:00:29	MarkDuplicates	Read    22,000,000 records.  Elapsed time: 00:02:34s.  Time for last 1,000,000:    7s.  Last read position: chr1:201,232,975
+INFO	2018-09-18 19:00:29	MarkDuplicates	Tracking 119480 as yet unmatched pairs. 2356 records in RAM.
+INFO	2018-09-18 19:00:36	MarkDuplicates	Read    23,000,000 records.  Elapsed time: 00:02:41s.  Time for last 1,000,000:    7s.  Last read position: chr1:210,525,599
+INFO	2018-09-18 19:00:36	MarkDuplicates	Tracking 124810 as yet unmatched pairs. 1956 records in RAM.
+INFO	2018-09-18 19:00:42	MarkDuplicates	Read    24,000,000 records.  Elapsed time: 00:02:47s.  Time for last 1,000,000:    5s.  Last read position: chr1:221,814,403
+INFO	2018-09-18 19:00:42	MarkDuplicates	Tracking 128930 as yet unmatched pairs. 1636 records in RAM.
+INFO	2018-09-18 19:00:49	MarkDuplicates	Read    25,000,000 records.  Elapsed time: 00:02:54s.  Time for last 1,000,000:    6s.  Last read position: chr1:233,080,846
+INFO	2018-09-18 19:00:49	MarkDuplicates	Tracking 134458 as yet unmatched pairs. 1105 records in RAM.
+INFO	2018-09-18 19:00:55	MarkDuplicates	Read    26,000,000 records.  Elapsed time: 00:03:00s.  Time for last 1,000,000:    5s.  Last read position: chr1:244,542,158
+INFO	2018-09-18 19:00:55	MarkDuplicates	Tracking 139360 as yet unmatched pairs. 269 records in RAM.
+INFO	2018-09-18 19:01:03	MarkDuplicates	Read    27,000,000 records.  Elapsed time: 00:03:08s.  Time for last 1,000,000:    7s.  Last read position: chr2:5,360,353
+INFO	2018-09-18 19:01:03	MarkDuplicates	Tracking 143414 as yet unmatched pairs. 20263 records in RAM.
+INFO	2018-09-18 19:01:12	MarkDuplicates	Read    28,000,000 records.  Elapsed time: 00:03:17s.  Time for last 1,000,000:    9s.  Last read position: chr2:17,127,731
+INFO	2018-09-18 19:01:12	MarkDuplicates	Tracking 147574 as yet unmatched pairs. 20560 records in RAM.
+INFO	2018-09-18 19:01:20	MarkDuplicates	Read    29,000,000 records.  Elapsed time: 00:03:25s.  Time for last 1,000,000:    7s.  Last read position: chr2:28,557,312
+INFO	2018-09-18 19:01:20	MarkDuplicates	Tracking 152612 as yet unmatched pairs. 20908 records in RAM.
+INFO	2018-09-18 19:01:27	MarkDuplicates	Read    30,000,000 records.  Elapsed time: 00:03:32s.  Time for last 1,000,000:    7s.  Last read position: chr2:37,247,870
+INFO	2018-09-18 19:01:27	MarkDuplicates	Tracking 235764 as yet unmatched pairs. 17621 records in RAM.
+INFO	2018-09-18 19:01:33	MarkDuplicates	Read    31,000,000 records.  Elapsed time: 00:03:38s.  Time for last 1,000,000:    5s.  Last read position: chr2:48,158,774
+INFO	2018-09-18 19:01:33	MarkDuplicates	Tracking 239836 as yet unmatched pairs. 17043 records in RAM.
+INFO	2018-09-18 19:01:40	MarkDuplicates	Read    32,000,000 records.  Elapsed time: 00:03:45s.  Time for last 1,000,000:    6s.  Last read position: chr2:59,601,228
+INFO	2018-09-18 19:01:40	MarkDuplicates	Tracking 242654 as yet unmatched pairs. 16519 records in RAM.
+INFO	2018-09-18 19:01:46	MarkDuplicates	Read    33,000,000 records.  Elapsed time: 00:03:51s.  Time for last 1,000,000:    6s.  Last read position: chr2:71,068,483
+INFO	2018-09-18 19:01:46	MarkDuplicates	Tracking 246726 as yet unmatched pairs. 15849 records in RAM.
+INFO	2018-09-18 19:01:53	MarkDuplicates	Read    34,000,000 records.  Elapsed time: 00:03:58s.  Time for last 1,000,000:    7s.  Last read position: chr2:82,576,476
+INFO	2018-09-18 19:01:53	MarkDuplicates	Tracking 249434 as yet unmatched pairs. 15190 records in RAM.
+INFO	2018-09-18 19:02:00	MarkDuplicates	Read    35,000,000 records.  Elapsed time: 00:04:05s.  Time for last 1,000,000:    6s.  Last read position: chr2:90,049,973
+INFO	2018-09-18 19:02:00	MarkDuplicates	Tracking 254900 as yet unmatched pairs. 14711 records in RAM.
+INFO	2018-09-18 19:02:07	MarkDuplicates	Read    36,000,000 records.  Elapsed time: 00:04:13s.  Time for last 1,000,000:    7s.  Last read position: chr2:92,311,218
+INFO	2018-09-18 19:02:07	MarkDuplicates	Tracking 271568 as yet unmatched pairs. 18547 records in RAM.
+INFO	2018-09-18 19:02:15	MarkDuplicates	Read    37,000,000 records.  Elapsed time: 00:04:21s.  Time for last 1,000,000:    7s.  Last read position: chr2:99,149,609
+INFO	2018-09-18 19:02:15	MarkDuplicates	Tracking 272838 as yet unmatched pairs. 13267 records in RAM.
+INFO	2018-09-18 19:02:21	MarkDuplicates	Read    38,000,000 records.  Elapsed time: 00:04:26s.  Time for last 1,000,000:    5s.  Last read position: chr2:110,930,471
+INFO	2018-09-18 19:02:21	MarkDuplicates	Tracking 276482 as yet unmatched pairs. 12522 records in RAM.
+INFO	2018-09-18 19:02:28	MarkDuplicates	Read    39,000,000 records.  Elapsed time: 00:04:33s.  Time for last 1,000,000:    6s.  Last read position: chr2:122,513,035
+INFO	2018-09-18 19:02:28	MarkDuplicates	Tracking 279796 as yet unmatched pairs. 11734 records in RAM.
+INFO	2018-09-18 19:02:33	MarkDuplicates	Read    40,000,000 records.  Elapsed time: 00:04:39s.  Time for last 1,000,000:    5s.  Last read position: chr2:133,006,259
+INFO	2018-09-18 19:02:33	MarkDuplicates	Tracking 285330 as yet unmatched pairs. 11009 records in RAM.
+INFO	2018-09-18 19:02:41	MarkDuplicates	Read    41,000,000 records.  Elapsed time: 00:04:46s.  Time for last 1,000,000:    7s.  Last read position: chr2:141,922,920
+INFO	2018-09-18 19:02:41	MarkDuplicates	Tracking 294098 as yet unmatched pairs. 9425 records in RAM.
+INFO	2018-09-18 19:02:50	MarkDuplicates	Read    42,000,000 records.  Elapsed time: 00:04:56s.  Time for last 1,000,000:    9s.  Last read position: chr2:153,398,876
+INFO	2018-09-18 19:02:50	MarkDuplicates	Tracking 296546 as yet unmatched pairs. 8643 records in RAM.
+INFO	2018-09-18 19:02:58	MarkDuplicates	Read    43,000,000 records.  Elapsed time: 00:05:03s.  Time for last 1,000,000:    7s.  Last read position: chr2:163,181,527
+INFO	2018-09-18 19:02:58	MarkDuplicates	Tracking 299408 as yet unmatched pairs. 7744 records in RAM.
+INFO	2018-09-18 19:03:05	MarkDuplicates	Read    44,000,000 records.  Elapsed time: 00:05:10s.  Time for last 1,000,000:    7s.  Last read position: chr2:172,805,880
+INFO	2018-09-18 19:03:05	MarkDuplicates	Tracking 302092 as yet unmatched pairs. 6921 records in RAM.
+INFO	2018-09-18 19:03:11	MarkDuplicates	Read    45,000,000 records.  Elapsed time: 00:05:16s.  Time for last 1,000,000:    5s.  Last read position: chr2:183,774,105
+INFO	2018-09-18 19:03:11	MarkDuplicates	Tracking 304774 as yet unmatched pairs. 6021 records in RAM.
+INFO	2018-09-18 19:03:17	MarkDuplicates	Read    46,000,000 records.  Elapsed time: 00:05:22s.  Time for last 1,000,000:    6s.  Last read position: chr2:194,796,462
+INFO	2018-09-18 19:03:17	MarkDuplicates	Tracking 306800 as yet unmatched pairs. 5124 records in RAM.
+INFO	2018-09-18 19:03:23	MarkDuplicates	Read    47,000,000 records.  Elapsed time: 00:05:28s.  Time for last 1,000,000:    5s.  Last read position: chr2:206,020,658
+INFO	2018-09-18 19:03:23	MarkDuplicates	Tracking 310172 as yet unmatched pairs. 4012 records in RAM.
+INFO	2018-09-18 19:03:31	MarkDuplicates	Read    48,000,000 records.  Elapsed time: 00:05:36s.  Time for last 1,000,000:    7s.  Last read position: chr2:217,353,746
+INFO	2018-09-18 19:03:31	MarkDuplicates	Tracking 312940 as yet unmatched pairs. 3028 records in RAM.
+INFO	2018-09-18 19:03:37	MarkDuplicates	Read    49,000,000 records.  Elapsed time: 00:05:42s.  Time for last 1,000,000:    6s.  Last read position: chr2:229,146,215
+INFO	2018-09-18 19:03:37	MarkDuplicates	Tracking 316810 as yet unmatched pairs. 1492 records in RAM.
+INFO	2018-09-18 19:03:45	MarkDuplicates	Read    50,000,000 records.  Elapsed time: 00:05:50s.  Time for last 1,000,000:    7s.  Last read position: chr2:241,187,845
+INFO	2018-09-18 19:03:45	MarkDuplicates	Tracking 320148 as yet unmatched pairs. 230 records in RAM.
+INFO	2018-09-18 19:03:52	MarkDuplicates	Read    51,000,000 records.  Elapsed time: 00:05:57s.  Time for last 1,000,000:    7s.  Last read position: chr3:11,568,376
+INFO	2018-09-18 19:03:52	MarkDuplicates	Tracking 322886 as yet unmatched pairs. 21641 records in RAM.
+INFO	2018-09-18 19:03:58	MarkDuplicates	Read    52,000,000 records.  Elapsed time: 00:06:03s.  Time for last 1,000,000:    5s.  Last read position: chr3:25,337,682
+INFO	2018-09-18 19:03:58	MarkDuplicates	Tracking 325830 as yet unmatched pairs. 20753 records in RAM.
+INFO	2018-09-18 19:04:05	MarkDuplicates	Read    53,000,000 records.  Elapsed time: 00:06:10s.  Time for last 1,000,000:    7s.  Last read position: chr3:38,981,152
+INFO	2018-09-18 19:04:05	MarkDuplicates	Tracking 328696 as yet unmatched pairs. 19817 records in RAM.
+INFO	2018-09-18 19:04:11	MarkDuplicates	Read    54,000,000 records.  Elapsed time: 00:06:16s.  Time for last 1,000,000:    5s.  Last read position: chr3:53,008,338
+INFO	2018-09-18 19:04:11	MarkDuplicates	Tracking 333042 as yet unmatched pairs. 18483 records in RAM.
+INFO	2018-09-18 19:04:19	MarkDuplicates	Read    55,000,000 records.  Elapsed time: 00:06:24s.  Time for last 1,000,000:    7s.  Last read position: chr3:67,092,714
+INFO	2018-09-18 19:04:19	MarkDuplicates	Tracking 336314 as yet unmatched pairs. 17392 records in RAM.
+INFO	2018-09-18 19:04:26	MarkDuplicates	Read    56,000,000 records.  Elapsed time: 00:06:31s.  Time for last 1,000,000:    6s.  Last read position: chr3:80,175,700
+INFO	2018-09-18 19:04:26	MarkDuplicates	Tracking 339250 as yet unmatched pairs. 16336 records in RAM.
+INFO	2018-09-18 19:04:33	MarkDuplicates	Read    57,000,000 records.  Elapsed time: 00:06:38s.  Time for last 1,000,000:    7s.  Last read position: chr3:90,471,345
+INFO	2018-09-18 19:04:33	MarkDuplicates	Tracking 344062 as yet unmatched pairs. 15467 records in RAM.
+INFO	2018-09-18 19:04:41	MarkDuplicates	Read    58,000,000 records.  Elapsed time: 00:06:46s.  Time for last 1,000,000:    7s.  Last read position: chr3:102,591,473
+INFO	2018-09-18 19:04:41	MarkDuplicates	Tracking 346756 as yet unmatched pairs. 13981 records in RAM.
+INFO	2018-09-18 19:04:46	MarkDuplicates	Read    59,000,000 records.  Elapsed time: 00:06:52s.  Time for last 1,000,000:    5s.  Last read position: chr3:110,669,828
+INFO	2018-09-18 19:04:46	MarkDuplicates	Tracking 348384 as yet unmatched pairs. 13104 records in RAM.
+INFO	2018-09-18 19:04:54	MarkDuplicates	Read    60,000,000 records.  Elapsed time: 00:06:59s.  Time for last 1,000,000:    7s.  Last read position: chr3:118,082,043
+INFO	2018-09-18 19:04:54	MarkDuplicates	Tracking 350038 as yet unmatched pairs. 12218 records in RAM.
+INFO	2018-09-18 19:04:59	MarkDuplicates	Read    61,000,000 records.  Elapsed time: 00:07:05s.  Time for last 1,000,000:    5s.  Last read position: chr3:125,512,956
+INFO	2018-09-18 19:04:59	MarkDuplicates	Tracking 352538 as yet unmatched pairs. 11067 records in RAM.
+INFO	2018-09-18 19:05:07	MarkDuplicates	Read    62,000,000 records.  Elapsed time: 00:07:12s.  Time for last 1,000,000:    7s.  Last read position: chr3:133,127,672
+INFO	2018-09-18 19:05:07	MarkDuplicates	Tracking 354820 as yet unmatched pairs. 9918 records in RAM.
+INFO	2018-09-18 19:05:13	MarkDuplicates	Read    63,000,000 records.  Elapsed time: 00:07:18s.  Time for last 1,000,000:    6s.  Last read position: chr3:142,646,986
+INFO	2018-09-18 19:05:13	MarkDuplicates	Tracking 357286 as yet unmatched pairs. 8544 records in RAM.
+INFO	2018-09-18 19:05:21	MarkDuplicates	Read    64,000,000 records.  Elapsed time: 00:07:26s.  Time for last 1,000,000:    7s.  Last read position: chr3:152,051,935
+INFO	2018-09-18 19:05:21	MarkDuplicates	Tracking 359098 as yet unmatched pairs. 7542 records in RAM.
+INFO	2018-09-18 19:05:29	MarkDuplicates	Read    65,000,000 records.  Elapsed time: 00:07:34s.  Time for last 1,000,000:    7s.  Last read position: chr3:161,741,089
+INFO	2018-09-18 19:05:29	MarkDuplicates	Tracking 361146 as yet unmatched pairs. 6382 records in RAM.
+INFO	2018-09-18 19:05:35	MarkDuplicates	Read    66,000,000 records.  Elapsed time: 00:07:40s.  Time for last 1,000,000:    5s.  Last read position: chr3:169,636,668
+INFO	2018-09-18 19:05:35	MarkDuplicates	Tracking 362470 as yet unmatched pairs. 5477 records in RAM.
+INFO	2018-09-18 19:05:42	MarkDuplicates	Read    67,000,000 records.  Elapsed time: 00:07:47s.  Time for last 1,000,000:    7s.  Last read position: chr3:176,904,082
+INFO	2018-09-18 19:05:42	MarkDuplicates	Tracking 364466 as yet unmatched pairs. 4331 records in RAM.
+INFO	2018-09-18 19:05:48	MarkDuplicates	Read    68,000,000 records.  Elapsed time: 00:07:53s.  Time for last 1,000,000:    5s.  Last read position: chr3:184,361,479
+INFO	2018-09-18 19:05:48	MarkDuplicates	Tracking 367104 as yet unmatched pairs. 2782 records in RAM.
+INFO	2018-09-18 19:05:55	MarkDuplicates	Read    69,000,000 records.  Elapsed time: 00:08:00s.  Time for last 1,000,000:    7s.  Last read position: chr3:191,962,703
+INFO	2018-09-18 19:05:55	MarkDuplicates	Tracking 369316 as yet unmatched pairs. 1435 records in RAM.
+INFO	2018-09-18 19:06:02	MarkDuplicates	Read    70,000,000 records.  Elapsed time: 00:08:08s.  Time for last 1,000,000:    7s.  Last read position: chr4:2,583,392
+INFO	2018-09-18 19:06:02	MarkDuplicates	Tracking 372368 as yet unmatched pairs. 23904 records in RAM.
+INFO	2018-09-18 19:06:10	MarkDuplicates	Read    71,000,000 records.  Elapsed time: 00:08:16s.  Time for last 1,000,000:    7s.  Last read position: chr4:17,035,364
+INFO	2018-09-18 19:06:10	MarkDuplicates	Tracking 374578 as yet unmatched pairs. 22668 records in RAM.
+INFO	2018-09-18 19:06:18	MarkDuplicates	Read    72,000,000 records.  Elapsed time: 00:08:23s.  Time for last 1,000,000:    7s.  Last read position: chr4:31,000,272
+INFO	2018-09-18 19:06:18	MarkDuplicates	Tracking 376418 as yet unmatched pairs. 21441 records in RAM.
+INFO	2018-09-18 19:06:24	MarkDuplicates	Read    73,000,000 records.  Elapsed time: 00:08:29s.  Time for last 1,000,000:    6s.  Last read position: chr4:43,548,786
+INFO	2018-09-18 19:06:24	MarkDuplicates	Tracking 378812 as yet unmatched pairs. 20001 records in RAM.
+INFO	2018-09-18 19:06:31	MarkDuplicates	Read    74,000,000 records.  Elapsed time: 00:08:36s.  Time for last 1,000,000:    7s.  Last read position: chr4:49,121,310
+INFO	2018-09-18 19:06:31	MarkDuplicates	Tracking 389574 as yet unmatched pairs. 27310 records in RAM.
+INFO	2018-09-18 19:06:37	MarkDuplicates	Read    75,000,000 records.  Elapsed time: 00:08:42s.  Time for last 1,000,000:    5s.  Last read position: chr4:53,687,556
+INFO	2018-09-18 19:06:37	MarkDuplicates	Tracking 384556 as yet unmatched pairs. 17758 records in RAM.
+INFO	2018-09-18 19:06:45	MarkDuplicates	Read    76,000,000 records.  Elapsed time: 00:08:50s.  Time for last 1,000,000:    7s.  Last read position: chr4:64,327,872
+INFO	2018-09-18 19:06:45	MarkDuplicates	Tracking 386528 as yet unmatched pairs. 16554 records in RAM.
+INFO	2018-09-18 19:06:52	MarkDuplicates	Read    77,000,000 records.  Elapsed time: 00:08:57s.  Time for last 1,000,000:    6s.  Last read position: chr4:74,753,667
+INFO	2018-09-18 19:06:52	MarkDuplicates	Tracking 389054 as yet unmatched pairs. 15189 records in RAM.
+INFO	2018-09-18 19:07:00	MarkDuplicates	Read    78,000,000 records.  Elapsed time: 00:09:05s.  Time for last 1,000,000:    8s.  Last read position: chr4:86,152,605
+INFO	2018-09-18 19:07:00	MarkDuplicates	Tracking 391418 as yet unmatched pairs. 13618 records in RAM.
+INFO	2018-09-18 19:07:08	MarkDuplicates	Read    79,000,000 records.  Elapsed time: 00:09:13s.  Time for last 1,000,000:    8s.  Last read position: chr4:97,317,616
+INFO	2018-09-18 19:07:08	MarkDuplicates	Tracking 393070 as yet unmatched pairs. 12349 records in RAM.
+INFO	2018-09-18 19:07:15	MarkDuplicates	Read    80,000,000 records.  Elapsed time: 00:09:20s.  Time for last 1,000,000:    7s.  Last read position: chr4:107,850,943
+INFO	2018-09-18 19:07:15	MarkDuplicates	Tracking 394610 as yet unmatched pairs. 11144 records in RAM.
+INFO	2018-09-18 19:07:21	MarkDuplicates	Read    81,000,000 records.  Elapsed time: 00:09:26s.  Time for last 1,000,000:    5s.  Last read position: chr4:119,147,712
+INFO	2018-09-18 19:07:21	MarkDuplicates	Tracking 396188 as yet unmatched pairs. 9787 records in RAM.
+INFO	2018-09-18 19:07:26	MarkDuplicates	Read    82,000,000 records.  Elapsed time: 00:09:32s.  Time for last 1,000,000:    5s.  Last read position: chr4:130,305,571
+INFO	2018-09-18 19:07:26	MarkDuplicates	Tracking 397950 as yet unmatched pairs. 8424 records in RAM.
+INFO	2018-09-18 19:07:33	MarkDuplicates	Read    83,000,000 records.  Elapsed time: 00:09:38s.  Time for last 1,000,000:    6s.  Last read position: chr4:141,405,360
+INFO	2018-09-18 19:07:33	MarkDuplicates	Tracking 399556 as yet unmatched pairs. 7170 records in RAM.
+INFO	2018-09-18 19:07:42	MarkDuplicates	Read    84,000,000 records.  Elapsed time: 00:09:47s.  Time for last 1,000,000:    8s.  Last read position: chr4:152,618,330
+INFO	2018-09-18 19:07:42	MarkDuplicates	Tracking 401162 as yet unmatched pairs. 5645 records in RAM.
+INFO	2018-09-18 19:07:50	MarkDuplicates	Read    85,000,000 records.  Elapsed time: 00:09:55s.  Time for last 1,000,000:    7s.  Last read position: chr4:163,842,398
+INFO	2018-09-18 19:07:50	MarkDuplicates	Tracking 402588 as yet unmatched pairs. 4285 records in RAM.
+INFO	2018-09-18 19:07:57	MarkDuplicates	Read    86,000,000 records.  Elapsed time: 00:10:02s.  Time for last 1,000,000:    7s.  Last read position: chr4:175,104,161
+INFO	2018-09-18 19:07:57	MarkDuplicates	Tracking 404138 as yet unmatched pairs. 2848 records in RAM.
+INFO	2018-09-18 19:08:04	MarkDuplicates	Read    87,000,000 records.  Elapsed time: 00:10:10s.  Time for last 1,000,000:    7s.  Last read position: chr4:186,496,535
+INFO	2018-09-18 19:08:04	MarkDuplicates	Tracking 406130 as yet unmatched pairs. 1198 records in RAM.
+INFO	2018-09-18 19:08:10	MarkDuplicates	Read    88,000,000 records.  Elapsed time: 00:10:15s.  Time for last 1,000,000:    5s.  Last read position: chr5:4,717,061
+INFO	2018-09-18 19:08:10	MarkDuplicates	Tracking 408218 as yet unmatched pairs. 28623 records in RAM.
+INFO	2018-09-18 19:08:15	MarkDuplicates	Read    89,000,000 records.  Elapsed time: 00:10:21s.  Time for last 1,000,000:    5s.  Last read position: chr5:14,704,237
+INFO	2018-09-18 19:08:15	MarkDuplicates	Tracking 409348 as yet unmatched pairs. 27482 records in RAM.
+INFO	2018-09-18 19:08:23	MarkDuplicates	Read    90,000,000 records.  Elapsed time: 00:10:28s.  Time for last 1,000,000:    7s.  Last read position: chr5:24,004,133
+INFO	2018-09-18 19:08:23	MarkDuplicates	Tracking 410748 as yet unmatched pairs. 26207 records in RAM.
+INFO	2018-09-18 19:08:29	MarkDuplicates	Read    91,000,000 records.  Elapsed time: 00:10:35s.  Time for last 1,000,000:    6s.  Last read position: chr5:33,610,604
+INFO	2018-09-18 19:08:29	MarkDuplicates	Tracking 412136 as yet unmatched pairs. 24777 records in RAM.
+INFO	2018-09-18 19:08:37	MarkDuplicates	Read    92,000,000 records.  Elapsed time: 00:10:42s.  Time for last 1,000,000:    7s.  Last read position: chr5:43,135,030
+INFO	2018-09-18 19:08:37	MarkDuplicates	Tracking 413426 as yet unmatched pairs. 23341 records in RAM.
+INFO	2018-09-18 19:08:45	MarkDuplicates	Read    93,000,000 records.  Elapsed time: 00:10:50s.  Time for last 1,000,000:    7s.  Last read position: chr5:53,403,964
+INFO	2018-09-18 19:08:45	MarkDuplicates	Tracking 420660 as yet unmatched pairs. 20578 records in RAM.
+INFO	2018-09-18 19:08:52	MarkDuplicates	Read    94,000,000 records.  Elapsed time: 00:10:57s.  Time for last 1,000,000:    7s.  Last read position: chr5:63,873,767
+INFO	2018-09-18 19:08:52	MarkDuplicates	Tracking 422064 as yet unmatched pairs. 18951 records in RAM.
+INFO	2018-09-18 19:08:56	MarkDuplicates	Read    95,000,000 records.  Elapsed time: 00:11:01s.  Time for last 1,000,000:    4s.  Last read position: chr5:78,331,612
+INFO	2018-09-18 19:08:56	MarkDuplicates	Tracking 423976 as yet unmatched pairs. 16978 records in RAM.
+INFO	2018-09-18 19:09:01	MarkDuplicates	Read    96,000,000 records.  Elapsed time: 00:11:06s.  Time for last 1,000,000:    5s.  Last read position: chr5:92,080,073
+INFO	2018-09-18 19:09:01	MarkDuplicates	Tracking 425230 as yet unmatched pairs. 15313 records in RAM.
+INFO	2018-09-18 19:09:08	MarkDuplicates	Read    97,000,000 records.  Elapsed time: 00:11:13s.  Time for last 1,000,000:    6s.  Last read position: chr5:105,561,569
+INFO	2018-09-18 19:09:08	MarkDuplicates	Tracking 426464 as yet unmatched pairs. 13904 records in RAM.
+INFO	2018-09-18 19:09:14	MarkDuplicates	Read    98,000,000 records.  Elapsed time: 00:11:19s.  Time for last 1,000,000:    6s.  Last read position: chr5:119,408,938
+INFO	2018-09-18 19:09:14	MarkDuplicates	Tracking 427526 as yet unmatched pairs. 12370 records in RAM.
+INFO	2018-09-18 19:09:21	MarkDuplicates	Read    99,000,000 records.  Elapsed time: 00:11:27s.  Time for last 1,000,000:    7s.  Last read position: chr5:132,975,708
+INFO	2018-09-18 19:09:21	MarkDuplicates	Tracking 428822 as yet unmatched pairs. 10649 records in RAM.
+INFO	2018-09-18 19:09:29	MarkDuplicates	Read   100,000,000 records.  Elapsed time: 00:11:34s.  Time for last 1,000,000:    7s.  Last read position: chr5:142,797,337
+INFO	2018-09-18 19:09:29	MarkDuplicates	Tracking 430812 as yet unmatched pairs. 8476 records in RAM.
+INFO	2018-09-18 19:09:36	MarkDuplicates	Read   101,000,000 records.  Elapsed time: 00:11:41s.  Time for last 1,000,000:    6s.  Last read position: chr5:151,802,306
+INFO	2018-09-18 19:09:36	MarkDuplicates	Tracking 432202 as yet unmatched pairs. 6752 records in RAM.
+INFO	2018-09-18 19:09:41	MarkDuplicates	Read   102,000,000 records.  Elapsed time: 00:11:46s.  Time for last 1,000,000:    5s.  Last read position: chr5:160,466,195
+INFO	2018-09-18 19:09:41	MarkDuplicates	Tracking 433498 as yet unmatched pairs. 4944 records in RAM.
+INFO	2018-09-18 19:09:47	MarkDuplicates	Read   103,000,000 records.  Elapsed time: 00:11:52s.  Time for last 1,000,000:    6s.  Last read position: chr5:169,069,027
+INFO	2018-09-18 19:09:47	MarkDuplicates	Tracking 434510 as yet unmatched pairs. 3224 records in RAM.
+INFO	2018-09-18 19:09:54	MarkDuplicates	Read   104,000,000 records.  Elapsed time: 00:11:59s.  Time for last 1,000,000:    6s.  Last read position: chr5:177,921,156
+INFO	2018-09-18 19:09:54	MarkDuplicates	Tracking 436202 as yet unmatched pairs. 1018 records in RAM.
+INFO	2018-09-18 19:10:04	MarkDuplicates	Read   105,000,000 records.  Elapsed time: 00:12:09s.  Time for last 1,000,000:    9s.  Last read position: chr6:5,291,417
+INFO	2018-09-18 19:10:04	MarkDuplicates	Tracking 437462 as yet unmatched pairs. 32119 records in RAM.
+INFO	2018-09-18 19:10:13	MarkDuplicates	Read   106,000,000 records.  Elapsed time: 00:12:19s.  Time for last 1,000,000:    9s.  Last read position: chr6:12,051,430
+INFO	2018-09-18 19:10:13	MarkDuplicates	Tracking 438552 as yet unmatched pairs. 30488 records in RAM.
+INFO	2018-09-18 19:10:19	MarkDuplicates	Read   107,000,000 records.  Elapsed time: 00:12:24s.  Time for last 1,000,000:    5s.  Last read position: chr6:19,416,661
+INFO	2018-09-18 19:10:19	MarkDuplicates	Tracking 439964 as yet unmatched pairs. 28323 records in RAM.
+INFO	2018-09-18 19:10:26	MarkDuplicates	Read   108,000,000 records.  Elapsed time: 00:12:31s.  Time for last 1,000,000:    6s.  Last read position: chr6:26,801,161
+INFO	2018-09-18 19:10:26	MarkDuplicates	Tracking 441286 as yet unmatched pairs. 26432 records in RAM.
+INFO	2018-09-18 19:10:32	MarkDuplicates	Read   109,000,000 records.  Elapsed time: 00:12:37s.  Time for last 1,000,000:    5s.  Last read position: chr6:34,462,577
+INFO	2018-09-18 19:10:32	MarkDuplicates	Tracking 442904 as yet unmatched pairs. 23948 records in RAM.
+INFO	2018-09-18 19:10:38	MarkDuplicates	Read   110,000,000 records.  Elapsed time: 00:12:43s.  Time for last 1,000,000:    6s.  Last read position: chr6:45,585,568
+INFO	2018-09-18 19:10:38	MarkDuplicates	Tracking 444294 as yet unmatched pairs. 21384 records in RAM.
+INFO	2018-09-18 19:10:45	MarkDuplicates	Read   111,000,000 records.  Elapsed time: 00:12:50s.  Time for last 1,000,000:    7s.  Last read position: chr6:58,409,412
+INFO	2018-09-18 19:10:45	MarkDuplicates	Tracking 445272 as yet unmatched pairs. 19653 records in RAM.
+INFO	2018-09-18 19:10:52	MarkDuplicates	Read   112,000,000 records.  Elapsed time: 00:12:57s.  Time for last 1,000,000:    6s.  Last read position: chr6:70,014,309
+INFO	2018-09-18 19:10:52	MarkDuplicates	Tracking 447364 as yet unmatched pairs. 17504 records in RAM.
+INFO	2018-09-18 19:11:00	MarkDuplicates	Read   113,000,000 records.  Elapsed time: 00:13:05s.  Time for last 1,000,000:    7s.  Last read position: chr6:80,937,614
+INFO	2018-09-18 19:11:00	MarkDuplicates	Tracking 448242 as yet unmatched pairs. 15696 records in RAM.
+INFO	2018-09-18 19:11:08	MarkDuplicates	Read   114,000,000 records.  Elapsed time: 00:13:13s.  Time for last 1,000,000:    8s.  Last read position: chr6:94,027,847
+INFO	2018-09-18 19:11:08	MarkDuplicates	Tracking 449172 as yet unmatched pairs. 13731 records in RAM.
+INFO	2018-09-18 19:11:18	MarkDuplicates	Read   115,000,000 records.  Elapsed time: 00:13:24s.  Time for last 1,000,000:   10s.  Last read position: chr6:107,379,259
+INFO	2018-09-18 19:11:18	MarkDuplicates	Tracking 449758 as yet unmatched pairs. 11976 records in RAM.
+INFO	2018-09-18 19:11:24	MarkDuplicates	Read   116,000,000 records.  Elapsed time: 00:13:29s.  Time for last 1,000,000:    5s.  Last read position: chr6:121,423,029
+INFO	2018-09-18 19:11:24	MarkDuplicates	Tracking 450866 as yet unmatched pairs. 9718 records in RAM.
+INFO	2018-09-18 19:11:30	MarkDuplicates	Read   117,000,000 records.  Elapsed time: 00:13:36s.  Time for last 1,000,000:    6s.  Last read position: chr6:132,262,078
+INFO	2018-09-18 19:11:30	MarkDuplicates	Tracking 451324 as yet unmatched pairs. 8052 records in RAM.
+INFO	2018-09-18 19:11:38	MarkDuplicates	Read   118,000,000 records.  Elapsed time: 00:13:43s.  Time for last 1,000,000:    7s.  Last read position: chr6:143,162,301
+INFO	2018-09-18 19:11:38	MarkDuplicates	Tracking 452158 as yet unmatched pairs. 5913 records in RAM.
+INFO	2018-09-18 19:11:45	MarkDuplicates	Read   119,000,000 records.  Elapsed time: 00:13:50s.  Time for last 1,000,000:    6s.  Last read position: chr6:153,482,741
+INFO	2018-09-18 19:11:45	MarkDuplicates	Tracking 452924 as yet unmatched pairs. 3706 records in RAM.
+INFO	2018-09-18 19:11:53	MarkDuplicates	Read   120,000,000 records.  Elapsed time: 00:13:58s.  Time for last 1,000,000:    7s.  Last read position: chr6:163,139,092
+INFO	2018-09-18 19:11:53	MarkDuplicates	Tracking 453716 as yet unmatched pairs. 1238 records in RAM.
+INFO	2018-09-18 19:12:01	MarkDuplicates	Read   121,000,000 records.  Elapsed time: 00:14:06s.  Time for last 1,000,000:    8s.  Last read position: chr7:5,371,585
+INFO	2018-09-18 19:12:01	MarkDuplicates	Tracking 454632 as yet unmatched pairs. 43435 records in RAM.
+INFO	2018-09-18 19:12:08	MarkDuplicates	Read   122,000,000 records.  Elapsed time: 00:14:13s.  Time for last 1,000,000:    6s.  Last read position: chr7:19,005,585
+INFO	2018-09-18 19:12:08	MarkDuplicates	Tracking 455198 as yet unmatched pairs. 41360 records in RAM.
+INFO	2018-09-18 19:12:13	MarkDuplicates	Read   123,000,000 records.  Elapsed time: 00:14:18s.  Time for last 1,000,000:    5s.  Last read position: chr7:32,987,668
+INFO	2018-09-18 19:12:13	MarkDuplicates	Tracking 455848 as yet unmatched pairs. 39113 records in RAM.
+INFO	2018-09-18 19:12:19	MarkDuplicates	Read   124,000,000 records.  Elapsed time: 00:14:25s.  Time for last 1,000,000:    6s.  Last read position: chr7:47,013,413
+INFO	2018-09-18 19:12:19	MarkDuplicates	Tracking 456542 as yet unmatched pairs. 37033 records in RAM.
+INFO	2018-09-18 19:12:27	MarkDuplicates	Read   125,000,000 records.  Elapsed time: 00:14:32s.  Time for last 1,000,000:    7s.  Last read position: chr7:61,168,770
+INFO	2018-09-18 19:12:27	MarkDuplicates	Tracking 461086 as yet unmatched pairs. 33893 records in RAM.
+INFO	2018-09-18 19:12:36	MarkDuplicates	Read   126,000,000 records.  Elapsed time: 00:14:42s.  Time for last 1,000,000:    9s.  Last read position: chr7:63,981,855
+INFO	2018-09-18 19:12:36	MarkDuplicates	Tracking 468716 as yet unmatched pairs. 28179 records in RAM.
+INFO	2018-09-18 19:12:46	MarkDuplicates	Read   127,000,000 records.  Elapsed time: 00:14:52s.  Time for last 1,000,000:    9s.  Last read position: chr7:74,957,986
+INFO	2018-09-18 19:12:46	MarkDuplicates	Tracking 470216 as yet unmatched pairs. 23911 records in RAM.
+INFO	2018-09-18 19:12:52	MarkDuplicates	Read   128,000,000 records.  Elapsed time: 00:14:57s.  Time for last 1,000,000:    5s.  Last read position: chr7:85,162,726
+INFO	2018-09-18 19:12:52	MarkDuplicates	Tracking 470808 as yet unmatched pairs. 21641 records in RAM.
+INFO	2018-09-18 19:13:03	MarkDuplicates	Read   129,000,000 records.  Elapsed time: 00:15:08s.  Time for last 1,000,000:   10s.  Last read position: chr7:95,808,793
+INFO	2018-09-18 19:13:03	MarkDuplicates	Tracking 470994 as yet unmatched pairs. 19814 records in RAM.
+INFO	2018-09-18 19:13:08	MarkDuplicates	Read   130,000,000 records.  Elapsed time: 00:15:14s.  Time for last 1,000,000:    5s.  Last read position: chr7:103,188,440
+INFO	2018-09-18 19:13:08	MarkDuplicates	Tracking 471808 as yet unmatched pairs. 16141 records in RAM.
+INFO	2018-09-18 19:13:14	MarkDuplicates	Read   131,000,000 records.  Elapsed time: 00:15:20s.  Time for last 1,000,000:    6s.  Last read position: chr7:110,678,238
+INFO	2018-09-18 19:13:14	MarkDuplicates	Tracking 472094 as yet unmatched pairs. 13424 records in RAM.
+INFO	2018-09-18 19:13:22	MarkDuplicates	Read   132,000,000 records.  Elapsed time: 00:15:27s.  Time for last 1,000,000:    7s.  Last read position: chr7:118,033,208
+INFO	2018-09-18 19:13:22	MarkDuplicates	Tracking 472242 as yet unmatched pairs. 11780 records in RAM.
+INFO	2018-09-18 19:13:29	MarkDuplicates	Read   133,000,000 records.  Elapsed time: 00:15:34s.  Time for last 1,000,000:    6s.  Last read position: chr7:125,447,057
+INFO	2018-09-18 19:13:29	MarkDuplicates	Tracking 472312 as yet unmatched pairs. 10107 records in RAM.
+INFO	2018-09-18 19:13:36	MarkDuplicates	Read   134,000,000 records.  Elapsed time: 00:15:41s.  Time for last 1,000,000:    7s.  Last read position: chr7:133,113,012
+INFO	2018-09-18 19:13:36	MarkDuplicates	Tracking 472726 as yet unmatched pairs. 7469 records in RAM.
+INFO	2018-09-18 19:13:45	MarkDuplicates	Read   135,000,000 records.  Elapsed time: 00:15:50s.  Time for last 1,000,000:    8s.  Last read position: chr7:141,210,693
+INFO	2018-09-18 19:13:45	MarkDuplicates	Tracking 472960 as yet unmatched pairs. 4599 records in RAM.
+INFO	2018-09-18 19:13:51	MarkDuplicates	Read   136,000,000 records.  Elapsed time: 00:15:56s.  Time for last 1,000,000:    6s.  Last read position: chr7:151,493,650
+INFO	2018-09-18 19:13:51	MarkDuplicates	Tracking 473158 as yet unmatched pairs. 2027 records in RAM.
+INFO	2018-09-18 19:13:57	MarkDuplicates	Read   137,000,000 records.  Elapsed time: 00:16:02s.  Time for last 1,000,000:    5s.  Last read position: chr8:2,918,995
+INFO	2018-09-18 19:13:57	MarkDuplicates	Tracking 473384 as yet unmatched pairs. 38912 records in RAM.
+INFO	2018-09-18 19:14:02	MarkDuplicates	Read   138,000,000 records.  Elapsed time: 00:16:07s.  Time for last 1,000,000:    5s.  Last read position: chr8:13,918,028
+INFO	2018-09-18 19:14:02	MarkDuplicates	Tracking 473600 as yet unmatched pairs. 36491 records in RAM.
+INFO	2018-09-18 19:14:10	MarkDuplicates	Read   139,000,000 records.  Elapsed time: 00:16:15s.  Time for last 1,000,000:    7s.  Last read position: chr8:27,313,610
+INFO	2018-09-18 19:14:10	MarkDuplicates	Tracking 473830 as yet unmatched pairs. 33903 records in RAM.
+INFO	2018-09-18 19:14:16	MarkDuplicates	Read   140,000,000 records.  Elapsed time: 00:16:21s.  Time for last 1,000,000:    6s.  Last read position: chr8:39,003,292
+INFO	2018-09-18 19:14:16	MarkDuplicates	Tracking 473996 as yet unmatched pairs. 30969 records in RAM.
+INFO	2018-09-18 19:14:24	MarkDuplicates	Read   141,000,000 records.  Elapsed time: 00:16:29s.  Time for last 1,000,000:    8s.  Last read position: chr8:46,842,238
+INFO	2018-09-18 19:14:24	MarkDuplicates	Tracking 489710 as yet unmatched pairs. 38302 records in RAM.
+INFO	2018-09-18 19:14:32	MarkDuplicates	Read   142,000,000 records.  Elapsed time: 00:16:37s.  Time for last 1,000,000:    7s.  Last read position: chr8:54,239,225
+INFO	2018-09-18 19:14:32	MarkDuplicates	Tracking 479108 as yet unmatched pairs. 21649 records in RAM.
+INFO	2018-09-18 19:14:39	MarkDuplicates	Read   143,000,000 records.  Elapsed time: 00:16:44s.  Time for last 1,000,000:    7s.  Last read position: chr8:66,243,211
+INFO	2018-09-18 19:14:39	MarkDuplicates	Tracking 478934 as yet unmatched pairs. 19362 records in RAM.
+INFO	2018-09-18 19:14:45	MarkDuplicates	Read   144,000,000 records.  Elapsed time: 00:16:50s.  Time for last 1,000,000:    5s.  Last read position: chr8:78,839,096
+INFO	2018-09-18 19:14:45	MarkDuplicates	Tracking 477516 as yet unmatched pairs. 15303 records in RAM.
+INFO	2018-09-18 19:14:51	MarkDuplicates	Read   145,000,000 records.  Elapsed time: 00:16:56s.  Time for last 1,000,000:    5s.  Last read position: chr8:89,891,602
+INFO	2018-09-18 19:14:51	MarkDuplicates	Tracking 477262 as yet unmatched pairs. 12987 records in RAM.
+INFO	2018-09-18 19:14:59	MarkDuplicates	Read   146,000,000 records.  Elapsed time: 00:17:04s.  Time for last 1,000,000:    7s.  Last read position: chr8:101,993,065
+INFO	2018-09-18 19:14:59	MarkDuplicates	Tracking 477180 as yet unmatched pairs. 10315 records in RAM.
+INFO	2018-09-18 19:15:06	MarkDuplicates	Read   147,000,000 records.  Elapsed time: 00:17:11s.  Time for last 1,000,000:    7s.  Last read position: chr8:112,321,261
+INFO	2018-09-18 19:15:06	MarkDuplicates	Tracking 477000 as yet unmatched pairs. 8029 records in RAM.
+INFO	2018-09-18 19:15:14	MarkDuplicates	Read   148,000,000 records.  Elapsed time: 00:17:19s.  Time for last 1,000,000:    7s.  Last read position: chr8:122,457,545
+INFO	2018-09-18 19:15:14	MarkDuplicates	Tracking 476820 as yet unmatched pairs. 5887 records in RAM.
+INFO	2018-09-18 19:15:22	MarkDuplicates	Read   149,000,000 records.  Elapsed time: 00:17:27s.  Time for last 1,000,000:    8s.  Last read position: chr8:132,413,771
+INFO	2018-09-18 19:15:22	MarkDuplicates	Tracking 476552 as yet unmatched pairs. 3066 records in RAM.
+INFO	2018-09-18 19:15:29	MarkDuplicates	Read   150,000,000 records.  Elapsed time: 00:17:34s.  Time for last 1,000,000:    6s.  Last read position: chr8:142,616,896
+INFO	2018-09-18 19:15:29	MarkDuplicates	Tracking 476242 as yet unmatched pairs. 854 records in RAM.
+INFO	2018-09-18 19:15:35	MarkDuplicates	Read   151,000,000 records.  Elapsed time: 00:17:40s.  Time for last 1,000,000:    6s.  Last read position: chr9:8,437,361
+INFO	2018-09-18 19:15:35	MarkDuplicates	Tracking 475934 as yet unmatched pairs. 37143 records in RAM.
+INFO	2018-09-18 19:15:40	MarkDuplicates	Read   152,000,000 records.  Elapsed time: 00:17:45s.  Time for last 1,000,000:    5s.  Last read position: chr9:20,067,762
+INFO	2018-09-18 19:15:40	MarkDuplicates	Tracking 475514 as yet unmatched pairs. 34822 records in RAM.
+INFO	2018-09-18 19:15:48	MarkDuplicates	Read   153,000,000 records.  Elapsed time: 00:17:54s.  Time for last 1,000,000:    8s.  Last read position: chr9:31,629,148
+INFO	2018-09-18 19:15:48	MarkDuplicates	Tracking 475104 as yet unmatched pairs. 32900 records in RAM.
+INFO	2018-09-18 19:15:58	MarkDuplicates	Read   154,000,000 records.  Elapsed time: 00:18:03s.  Time for last 1,000,000:    9s.  Last read position: chr9:43,076,081
+INFO	2018-09-18 19:15:58	MarkDuplicates	Tracking 474888 as yet unmatched pairs. 29490 records in RAM.
+INFO	2018-09-18 19:16:08	MarkDuplicates	Read   155,000,000 records.  Elapsed time: 00:18:13s.  Time for last 1,000,000:    9s.  Last read position: chr9:68,415,256
+INFO	2018-09-18 19:16:08	MarkDuplicates	Tracking 476778 as yet unmatched pairs. 25006 records in RAM.
+INFO	2018-09-18 19:16:14	MarkDuplicates	Read   156,000,000 records.  Elapsed time: 00:18:19s.  Time for last 1,000,000:    6s.  Last read position: chr9:75,375,104
+INFO	2018-09-18 19:16:14	MarkDuplicates	Tracking 475988 as yet unmatched pairs. 19148 records in RAM.
+INFO	2018-09-18 19:16:21	MarkDuplicates	Read   157,000,000 records.  Elapsed time: 00:18:26s.  Time for last 1,000,000:    7s.  Last read position: chr9:84,068,943
+INFO	2018-09-18 19:16:21	MarkDuplicates	Tracking 475400 as yet unmatched pairs. 16551 records in RAM.
+INFO	2018-09-18 19:16:27	MarkDuplicates	Read   158,000,000 records.  Elapsed time: 00:18:32s.  Time for last 1,000,000:    5s.  Last read position: chr9:93,050,461
+INFO	2018-09-18 19:16:27	MarkDuplicates	Tracking 474860 as yet unmatched pairs. 13490 records in RAM.
+INFO	2018-09-18 19:16:35	MarkDuplicates	Read   159,000,000 records.  Elapsed time: 00:18:40s.  Time for last 1,000,000:    7s.  Last read position: chr9:102,362,004
+INFO	2018-09-18 19:16:35	MarkDuplicates	Tracking 474196 as yet unmatched pairs. 10176 records in RAM.
+INFO	2018-09-18 19:16:42	MarkDuplicates	Read   160,000,000 records.  Elapsed time: 00:18:47s.  Time for last 1,000,000:    6s.  Last read position: chr9:116,333,482
+INFO	2018-09-18 19:16:42	MarkDuplicates	Tracking 473494 as yet unmatched pairs. 6706 records in RAM.
+INFO	2018-09-18 19:16:47	MarkDuplicates	Read   161,000,000 records.  Elapsed time: 00:18:52s.  Time for last 1,000,000:    5s.  Last read position: chr9:130,617,446
+INFO	2018-09-18 19:16:47	MarkDuplicates	Tracking 472794 as yet unmatched pairs. 3330 records in RAM.
+INFO	2018-09-18 19:16:55	MarkDuplicates	Read   162,000,000 records.  Elapsed time: 00:19:00s.  Time for last 1,000,000:    7s.  Last read position: chr10:2,962,105
+INFO	2018-09-18 19:16:55	MarkDuplicates	Tracking 472108 as yet unmatched pairs. 49667 records in RAM.
+INFO	2018-09-18 19:17:03	MarkDuplicates	Read   163,000,000 records.  Elapsed time: 00:19:08s.  Time for last 1,000,000:    8s.  Last read position: chr10:12,996,452
+INFO	2018-09-18 19:17:03	MarkDuplicates	Tracking 471398 as yet unmatched pairs. 46404 records in RAM.
+INFO	2018-09-18 19:17:10	MarkDuplicates	Read   164,000,000 records.  Elapsed time: 00:19:15s.  Time for last 1,000,000:    6s.  Last read position: chr10:23,054,235
+INFO	2018-09-18 19:17:10	MarkDuplicates	Tracking 470424 as yet unmatched pairs. 42603 records in RAM.
+INFO	2018-09-18 19:17:15	MarkDuplicates	Read   165,000,000 records.  Elapsed time: 00:19:20s.  Time for last 1,000,000:    5s.  Last read position: chr10:32,470,019
+INFO	2018-09-18 19:17:15	MarkDuplicates	Tracking 469444 as yet unmatched pairs. 38687 records in RAM.
+INFO	2018-09-18 19:17:21	MarkDuplicates	Read   166,000,000 records.  Elapsed time: 00:19:26s.  Time for last 1,000,000:    5s.  Last read position: chr10:39,130,917
+INFO	2018-09-18 19:17:21	MarkDuplicates	Tracking 471332 as yet unmatched pairs. 36123 records in RAM.
+INFO	2018-09-18 19:17:32	MarkDuplicates	Read   167,000,000 records.  Elapsed time: 00:19:37s.  Time for last 1,000,000:   10s.  Last read position: chr10:42,388,377
+INFO	2018-09-18 19:17:32	MarkDuplicates	Tracking 489784 as yet unmatched pairs. 51253 records in RAM.
+INFO	2018-09-18 19:17:37	MarkDuplicates	Read   168,000,000 records.  Elapsed time: 00:19:43s.  Time for last 1,000,000:    5s.  Last read position: chr10:42,530,631
+INFO	2018-09-18 19:17:37	MarkDuplicates	Tracking 482532 as yet unmatched pairs. 39516 records in RAM.
+INFO	2018-09-18 19:17:48	MarkDuplicates	Read   169,000,000 records.  Elapsed time: 00:19:53s.  Time for last 1,000,000:   10s.  Last read position: chr10:45,944,316
+INFO	2018-09-18 19:17:48	MarkDuplicates	Tracking 471962 as yet unmatched pairs. 25342 records in RAM.
+INFO	2018-09-18 19:17:54	MarkDuplicates	Read   170,000,000 records.  Elapsed time: 00:19:59s.  Time for last 1,000,000:    6s.  Last read position: chr10:59,101,991
+INFO	2018-09-18 19:17:54	MarkDuplicates	Tracking 471090 as yet unmatched pairs. 22797 records in RAM.
+INFO	2018-09-18 19:18:00	MarkDuplicates	Read   171,000,000 records.  Elapsed time: 00:20:05s.  Time for last 1,000,000:    6s.  Last read position: chr10:72,904,039
+INFO	2018-09-18 19:18:00	MarkDuplicates	Tracking 470110 as yet unmatched pairs. 19582 records in RAM.
+INFO	2018-09-18 19:18:05	MarkDuplicates	Read   172,000,000 records.  Elapsed time: 00:20:10s.  Time for last 1,000,000:    5s.  Last read position: chr10:87,109,397
+INFO	2018-09-18 19:18:05	MarkDuplicates	Tracking 469112 as yet unmatched pairs. 16085 records in RAM.
+INFO	2018-09-18 19:18:11	MarkDuplicates	Read   173,000,000 records.  Elapsed time: 00:20:16s.  Time for last 1,000,000:    5s.  Last read position: chr10:99,827,033
+INFO	2018-09-18 19:18:11	MarkDuplicates	Tracking 467876 as yet unmatched pairs. 11601 records in RAM.
+INFO	2018-09-18 19:18:18	MarkDuplicates	Read   174,000,000 records.  Elapsed time: 00:20:23s.  Time for last 1,000,000:    7s.  Last read position: chr10:109,784,691
+INFO	2018-09-18 19:18:18	MarkDuplicates	Tracking 466700 as yet unmatched pairs. 7940 records in RAM.
+INFO	2018-09-18 19:18:23	MarkDuplicates	Read   175,000,000 records.  Elapsed time: 00:20:29s.  Time for last 1,000,000:    5s.  Last read position: chr10:119,832,773
+INFO	2018-09-18 19:18:23	MarkDuplicates	Tracking 465592 as yet unmatched pairs. 4889 records in RAM.
+INFO	2018-09-18 19:18:31	MarkDuplicates	Read   176,000,000 records.  Elapsed time: 00:20:36s.  Time for last 1,000,000:    7s.  Last read position: chr10:130,042,702
+INFO	2018-09-18 19:18:31	MarkDuplicates	Tracking 464432 as yet unmatched pairs. 1513 records in RAM.
+INFO	2018-09-18 19:18:39	MarkDuplicates	Read   177,000,000 records.  Elapsed time: 00:20:45s.  Time for last 1,000,000:    8s.  Last read position: chr11:5,165,047
+INFO	2018-09-18 19:18:39	MarkDuplicates	Tracking 463964 as yet unmatched pairs. 51158 records in RAM.
+INFO	2018-09-18 19:18:46	MarkDuplicates	Read   178,000,000 records.  Elapsed time: 00:20:52s.  Time for last 1,000,000:    7s.  Last read position: chr11:17,061,782
+INFO	2018-09-18 19:18:46	MarkDuplicates	Tracking 462738 as yet unmatched pairs. 48199 records in RAM.
+INFO	2018-09-18 19:18:53	MarkDuplicates	Read   179,000,000 records.  Elapsed time: 00:20:58s.  Time for last 1,000,000:    6s.  Last read position: chr11:26,940,491
+INFO	2018-09-18 19:18:53	MarkDuplicates	Tracking 461554 as yet unmatched pairs. 45545 records in RAM.
+INFO	2018-09-18 19:19:01	MarkDuplicates	Read   180,000,000 records.  Elapsed time: 00:21:06s.  Time for last 1,000,000:    7s.  Last read position: chr11:36,667,863
+INFO	2018-09-18 19:19:01	MarkDuplicates	Tracking 460406 as yet unmatched pairs. 42708 records in RAM.
+INFO	2018-09-18 19:19:07	MarkDuplicates	Read   181,000,000 records.  Elapsed time: 00:21:13s.  Time for last 1,000,000:    6s.  Last read position: chr11:46,615,004
+INFO	2018-09-18 19:19:07	MarkDuplicates	Tracking 459150 as yet unmatched pairs. 39944 records in RAM.
+INFO	2018-09-18 19:19:13	MarkDuplicates	Read   182,000,000 records.  Elapsed time: 00:21:18s.  Time for last 1,000,000:    5s.  Last read position: chr11:51,589,479
+INFO	2018-09-18 19:19:13	MarkDuplicates	Tracking 459772 as yet unmatched pairs. 30141 records in RAM.
+INFO	2018-09-18 19:19:21	MarkDuplicates	Read   183,000,000 records.  Elapsed time: 00:21:26s.  Time for last 1,000,000:    8s.  Last read position: chr11:64,523,012
+INFO	2018-09-18 19:19:21	MarkDuplicates	Tracking 453990 as yet unmatched pairs. 19016 records in RAM.
+INFO	2018-09-18 19:19:29	MarkDuplicates	Read   184,000,000 records.  Elapsed time: 00:21:34s.  Time for last 1,000,000:    7s.  Last read position: chr11:76,885,136
+INFO	2018-09-18 19:19:29	MarkDuplicates	Tracking 452180 as yet unmatched pairs. 14281 records in RAM.
+INFO	2018-09-18 19:19:36	MarkDuplicates	Read   185,000,000 records.  Elapsed time: 00:21:41s.  Time for last 1,000,000:    6s.  Last read position: chr11:88,540,581
+INFO	2018-09-18 19:19:36	MarkDuplicates	Tracking 450748 as yet unmatched pairs. 10855 records in RAM.
+INFO	2018-09-18 19:19:42	MarkDuplicates	Read   186,000,000 records.  Elapsed time: 00:21:47s.  Time for last 1,000,000:    5s.  Last read position: chr11:100,400,735
+INFO	2018-09-18 19:19:42	MarkDuplicates	Tracking 449432 as yet unmatched pairs. 8167 records in RAM.
+INFO	2018-09-18 19:19:47	MarkDuplicates	Read   187,000,000 records.  Elapsed time: 00:21:52s.  Time for last 1,000,000:    5s.  Last read position: chr11:113,516,836
+INFO	2018-09-18 19:19:47	MarkDuplicates	Tracking 448028 as yet unmatched pairs. 4955 records in RAM.
+INFO	2018-09-18 19:19:55	MarkDuplicates	Read   188,000,000 records.  Elapsed time: 00:22:01s.  Time for last 1,000,000:    8s.  Last read position: chr11:128,919,561
+INFO	2018-09-18 19:19:55	MarkDuplicates	Tracking 446326 as yet unmatched pairs. 1152 records in RAM.
+INFO	2018-09-18 19:20:01	MarkDuplicates	Read   189,000,000 records.  Elapsed time: 00:22:06s.  Time for last 1,000,000:    5s.  Last read position: chr12:6,135,448
+INFO	2018-09-18 19:20:01	MarkDuplicates	Tracking 444792 as yet unmatched pairs. 59809 records in RAM.
+INFO	2018-09-18 19:20:08	MarkDuplicates	Read   190,000,000 records.  Elapsed time: 00:22:14s.  Time for last 1,000,000:    7s.  Last read position: chr12:15,902,169
+INFO	2018-09-18 19:20:08	MarkDuplicates	Tracking 443096 as yet unmatched pairs. 56082 records in RAM.
+INFO	2018-09-18 19:20:17	MarkDuplicates	Read   191,000,000 records.  Elapsed time: 00:22:22s.  Time for last 1,000,000:    8s.  Last read position: chr12:25,376,235
+INFO	2018-09-18 19:20:17	MarkDuplicates	Tracking 442054 as yet unmatched pairs. 53311 records in RAM.
+INFO	2018-09-18 19:20:23	MarkDuplicates	Read   192,000,000 records.  Elapsed time: 00:22:28s.  Time for last 1,000,000:    6s.  Last read position: chr12:34,747,415
+INFO	2018-09-18 19:20:23	MarkDuplicates	Tracking 440076 as yet unmatched pairs. 49151 records in RAM.
+INFO	2018-09-18 19:20:29	MarkDuplicates	Read   193,000,000 records.  Elapsed time: 00:22:34s.  Time for last 1,000,000:    5s.  Last read position: chr12:45,023,423
+INFO	2018-09-18 19:20:29	MarkDuplicates	Tracking 435602 as yet unmatched pairs. 38665 records in RAM.
+INFO	2018-09-18 19:20:37	MarkDuplicates	Read   194,000,000 records.  Elapsed time: 00:22:42s.  Time for last 1,000,000:    7s.  Last read position: chr12:53,635,671
+INFO	2018-09-18 19:20:37	MarkDuplicates	Tracking 433248 as yet unmatched pairs. 34045 records in RAM.
+INFO	2018-09-18 19:20:44	MarkDuplicates	Read   195,000,000 records.  Elapsed time: 00:22:49s.  Time for last 1,000,000:    7s.  Last read position: chr12:61,166,037
+INFO	2018-09-18 19:20:44	MarkDuplicates	Tracking 431250 as yet unmatched pairs. 30276 records in RAM.
+INFO	2018-09-18 19:20:50	MarkDuplicates	Read   196,000,000 records.  Elapsed time: 00:22:55s.  Time for last 1,000,000:    5s.  Last read position: chr12:68,653,312
+INFO	2018-09-18 19:20:50	MarkDuplicates	Tracking 429660 as yet unmatched pairs. 27369 records in RAM.
+INFO	2018-09-18 19:21:00	MarkDuplicates	Read   197,000,000 records.  Elapsed time: 00:23:05s.  Time for last 1,000,000:    9s.  Last read position: chr12:76,148,158
+INFO	2018-09-18 19:21:00	MarkDuplicates	Tracking 428094 as yet unmatched pairs. 24538 records in RAM.
+INFO	2018-09-18 19:21:05	MarkDuplicates	Read   198,000,000 records.  Elapsed time: 00:23:10s.  Time for last 1,000,000:    5s.  Last read position: chr12:83,561,471
+INFO	2018-09-18 19:21:05	MarkDuplicates	Tracking 426814 as yet unmatched pairs. 22051 records in RAM.
+INFO	2018-09-18 19:21:11	MarkDuplicates	Read   199,000,000 records.  Elapsed time: 00:23:16s.  Time for last 1,000,000:    6s.  Last read position: chr12:91,031,783
+INFO	2018-09-18 19:21:11	MarkDuplicates	Tracking 425540 as yet unmatched pairs. 19811 records in RAM.
+INFO	2018-09-18 19:21:18	MarkDuplicates	Read   200,000,000 records.  Elapsed time: 00:23:23s.  Time for last 1,000,000:    6s.  Last read position: chr12:98,592,574
+INFO	2018-09-18 19:21:18	MarkDuplicates	Tracking 423406 as yet unmatched pairs. 16080 records in RAM.
+INFO	2018-09-18 19:21:24	MarkDuplicates	Read   201,000,000 records.  Elapsed time: 00:23:29s.  Time for last 1,000,000:    5s.  Last read position: chr12:106,619,255
+INFO	2018-09-18 19:21:24	MarkDuplicates	Tracking 421496 as yet unmatched pairs. 12589 records in RAM.
+INFO	2018-09-18 19:21:31	MarkDuplicates	Read   202,000,000 records.  Elapsed time: 00:23:36s.  Time for last 1,000,000:    7s.  Last read position: chr12:118,588,557
+INFO	2018-09-18 19:21:31	MarkDuplicates	Tracking 418712 as yet unmatched pairs. 7309 records in RAM.
+INFO	2018-09-18 19:21:37	MarkDuplicates	Read   203,000,000 records.  Elapsed time: 00:23:42s.  Time for last 1,000,000:    5s.  Last read position: chr12:130,583,415
+INFO	2018-09-18 19:21:37	MarkDuplicates	Tracking 415414 as yet unmatched pairs. 1136 records in RAM.
+INFO	2018-09-18 19:21:49	MarkDuplicates	Read   204,000,000 records.  Elapsed time: 00:23:54s.  Time for last 1,000,000:   11s.  Last read position: chr13:29,169,848
+INFO	2018-09-18 19:21:49	MarkDuplicates	Tracking 412700 as yet unmatched pairs. 21300 records in RAM.
+INFO	2018-09-18 19:21:54	MarkDuplicates	Read   205,000,000 records.  Elapsed time: 00:23:59s.  Time for last 1,000,000:    5s.  Last read position: chr13:43,128,318
+INFO	2018-09-18 19:21:54	MarkDuplicates	Tracking 410638 as yet unmatched pairs. 17767 records in RAM.
+INFO	2018-09-18 19:22:01	MarkDuplicates	Read   206,000,000 records.  Elapsed time: 00:24:06s.  Time for last 1,000,000:    7s.  Last read position: chr13:56,888,936
+INFO	2018-09-18 19:22:01	MarkDuplicates	Tracking 408194 as yet unmatched pairs. 13698 records in RAM.
+INFO	2018-09-18 19:22:08	MarkDuplicates	Read   207,000,000 records.  Elapsed time: 00:24:13s.  Time for last 1,000,000:    6s.  Last read position: chr13:70,012,144
+INFO	2018-09-18 19:22:08	MarkDuplicates	Tracking 406412 as yet unmatched pairs. 10804 records in RAM.
+INFO	2018-09-18 19:22:13	MarkDuplicates	Read   208,000,000 records.  Elapsed time: 00:24:18s.  Time for last 1,000,000:    5s.  Last read position: chr13:83,483,729
+INFO	2018-09-18 19:22:13	MarkDuplicates	Tracking 404458 as yet unmatched pairs. 7611 records in RAM.
+INFO	2018-09-18 19:22:21	MarkDuplicates	Read   209,000,000 records.  Elapsed time: 00:24:26s.  Time for last 1,000,000:    7s.  Last read position: chr13:97,208,778
+INFO	2018-09-18 19:22:21	MarkDuplicates	Tracking 402448 as yet unmatched pairs. 4411 records in RAM.
+INFO	2018-09-18 19:22:26	MarkDuplicates	Read   210,000,000 records.  Elapsed time: 00:24:32s.  Time for last 1,000,000:    5s.  Last read position: chr13:111,318,232
+INFO	2018-09-18 19:22:26	MarkDuplicates	Tracking 400242 as yet unmatched pairs. 838 records in RAM.
+INFO	2018-09-18 19:22:37	MarkDuplicates	Read   211,000,000 records.  Elapsed time: 00:24:42s.  Time for last 1,000,000:   10s.  Last read position: chr14:24,573,849
+INFO	2018-09-18 19:22:37	MarkDuplicates	Tracking 396630 as yet unmatched pairs. 34906 records in RAM.
+INFO	2018-09-18 19:22:42	MarkDuplicates	Read   212,000,000 records.  Elapsed time: 00:24:48s.  Time for last 1,000,000:    5s.  Last read position: chr14:35,054,704
+INFO	2018-09-18 19:22:42	MarkDuplicates	Tracking 394496 as yet unmatched pairs. 31402 records in RAM.
+INFO	2018-09-18 19:22:50	MarkDuplicates	Read   213,000,000 records.  Elapsed time: 00:24:55s.  Time for last 1,000,000:    7s.  Last read position: chr14:46,189,392
+INFO	2018-09-18 19:22:50	MarkDuplicates	Tracking 392118 as yet unmatched pairs. 27810 records in RAM.
+INFO	2018-09-18 19:22:56	MarkDuplicates	Read   214,000,000 records.  Elapsed time: 00:25:02s.  Time for last 1,000,000:    6s.  Last read position: chr14:57,485,268
+INFO	2018-09-18 19:22:56	MarkDuplicates	Tracking 389728 as yet unmatched pairs. 24081 records in RAM.
+INFO	2018-09-18 19:23:02	MarkDuplicates	Read   215,000,000 records.  Elapsed time: 00:25:07s.  Time for last 1,000,000:    5s.  Last read position: chr14:69,316,898
+INFO	2018-09-18 19:23:02	MarkDuplicates	Tracking 386870 as yet unmatched pairs. 19628 records in RAM.
+INFO	2018-09-18 19:23:09	MarkDuplicates	Read   216,000,000 records.  Elapsed time: 00:25:14s.  Time for last 1,000,000:    6s.  Last read position: chr14:83,478,801
+INFO	2018-09-18 19:23:09	MarkDuplicates	Tracking 383172 as yet unmatched pairs. 14004 records in RAM.
+INFO	2018-09-18 19:23:15	MarkDuplicates	Read   217,000,000 records.  Elapsed time: 00:25:20s.  Time for last 1,000,000:    6s.  Last read position: chr14:93,936,895
+INFO	2018-09-18 19:23:15	MarkDuplicates	Tracking 379922 as yet unmatched pairs. 9058 records in RAM.
+INFO	2018-09-18 19:23:25	MarkDuplicates	Read   218,000,000 records.  Elapsed time: 00:25:30s.  Time for last 1,000,000:   10s.  Last read position: chr14:104,009,324
+INFO	2018-09-18 19:23:25	MarkDuplicates	Tracking 374620 as yet unmatched pairs. 1420 records in RAM.
+INFO	2018-09-18 19:23:31	MarkDuplicates	Read   219,000,000 records.  Elapsed time: 00:25:36s.  Time for last 1,000,000:    5s.  Last read position: chr15:24,923,355
+INFO	2018-09-18 19:23:31	MarkDuplicates	Tracking 371280 as yet unmatched pairs. 28555 records in RAM.
+INFO	2018-09-18 19:23:38	MarkDuplicates	Read   220,000,000 records.  Elapsed time: 00:25:43s.  Time for last 1,000,000:    6s.  Last read position: chr15:34,963,263
+INFO	2018-09-18 19:23:38	MarkDuplicates	Tracking 368490 as yet unmatched pairs. 24522 records in RAM.
+INFO	2018-09-18 19:23:45	MarkDuplicates	Read   221,000,000 records.  Elapsed time: 00:25:50s.  Time for last 1,000,000:    6s.  Last read position: chr15:47,701,396
+INFO	2018-09-18 19:23:45	MarkDuplicates	Tracking 365072 as yet unmatched pairs. 19548 records in RAM.
+INFO	2018-09-18 19:23:50	MarkDuplicates	Read   222,000,000 records.  Elapsed time: 00:25:56s.  Time for last 1,000,000:    5s.  Last read position: chr15:61,529,524
+INFO	2018-09-18 19:23:50	MarkDuplicates	Tracking 361974 as yet unmatched pairs. 15051 records in RAM.
+INFO	2018-09-18 19:23:57	MarkDuplicates	Read   223,000,000 records.  Elapsed time: 00:26:03s.  Time for last 1,000,000:    6s.  Last read position: chr15:74,529,178
+INFO	2018-09-18 19:23:57	MarkDuplicates	Tracking 358494 as yet unmatched pairs. 9947 records in RAM.
+INFO	2018-09-18 19:24:04	MarkDuplicates	Read   224,000,000 records.  Elapsed time: 00:26:09s.  Time for last 1,000,000:    6s.  Last read position: chr15:89,048,787
+INFO	2018-09-18 19:24:04	MarkDuplicates	Tracking 355076 as yet unmatched pairs. 4983 records in RAM.
+INFO	2018-09-18 19:24:15	MarkDuplicates	Read   225,000,000 records.  Elapsed time: 00:26:20s.  Time for last 1,000,000:   10s.  Last read position: chr15:101,702,190
+INFO	2018-09-18 19:24:15	MarkDuplicates	Tracking 351822 as yet unmatched pairs. 379 records in RAM.
+INFO	2018-09-18 19:24:21	MarkDuplicates	Read   226,000,000 records.  Elapsed time: 00:26:26s.  Time for last 1,000,000:    6s.  Last read position: chr16:10,879,431
+INFO	2018-09-18 19:24:21	MarkDuplicates	Tracking 347312 as yet unmatched pairs. 47940 records in RAM.
+INFO	2018-09-18 19:24:28	MarkDuplicates	Read   227,000,000 records.  Elapsed time: 00:26:33s.  Time for last 1,000,000:    6s.  Last read position: chr16:22,358,315
+INFO	2018-09-18 19:24:28	MarkDuplicates	Tracking 342594 as yet unmatched pairs. 41225 records in RAM.
+INFO	2018-09-18 19:24:35	MarkDuplicates	Read   228,000,000 records.  Elapsed time: 00:26:40s.  Time for last 1,000,000:    7s.  Last read position: chr16:33,011,612
+INFO	2018-09-18 19:24:35	MarkDuplicates	Tracking 337172 as yet unmatched pairs. 33937 records in RAM.
+INFO	2018-09-18 19:24:40	MarkDuplicates	Read   229,000,000 records.  Elapsed time: 00:26:46s.  Time for last 1,000,000:    5s.  Last read position: chr16:46,393,750
+INFO	2018-09-18 19:24:40	MarkDuplicates	Tracking 351402 as yet unmatched pairs. 42988 records in RAM.
+INFO	2018-09-18 19:24:48	MarkDuplicates	Read   230,000,000 records.  Elapsed time: 00:26:53s.  Time for last 1,000,000:    7s.  Last read position: chr16:46,433,257
+INFO	2018-09-18 19:24:48	MarkDuplicates	Tracking 339442 as yet unmatched pairs. 30261 records in RAM.
+INFO	2018-09-18 19:24:54	MarkDuplicates	Read   231,000,000 records.  Elapsed time: 00:26:59s.  Time for last 1,000,000:    5s.  Last read position: chr16:59,743,090
+INFO	2018-09-18 19:24:54	MarkDuplicates	Tracking 323248 as yet unmatched pairs. 12803 records in RAM.
+INFO	2018-09-18 19:25:05	MarkDuplicates	Read   232,000,000 records.  Elapsed time: 00:27:10s.  Time for last 1,000,000:   10s.  Last read position: chr16:73,528,095
+INFO	2018-09-18 19:25:05	MarkDuplicates	Tracking 318886 as yet unmatched pairs. 7059 records in RAM.
+INFO	2018-09-18 19:25:10	MarkDuplicates	Read   233,000,000 records.  Elapsed time: 00:27:15s.  Time for last 1,000,000:    5s.  Last read position: chr16:88,170,350
+INFO	2018-09-18 19:25:10	MarkDuplicates	Tracking 314314 as yet unmatched pairs. 978 records in RAM.
+INFO	2018-09-18 19:25:18	MarkDuplicates	Read   234,000,000 records.  Elapsed time: 00:27:23s.  Time for last 1,000,000:    7s.  Last read position: chr17:8,852,490
+INFO	2018-09-18 19:25:18	MarkDuplicates	Tracking 308694 as yet unmatched pairs. 48185 records in RAM.
+INFO	2018-09-18 19:25:25	MarkDuplicates	Read   235,000,000 records.  Elapsed time: 00:27:30s.  Time for last 1,000,000:    7s.  Last read position: chr17:21,316,962
+INFO	2018-09-18 19:25:25	MarkDuplicates	Tracking 303808 as yet unmatched pairs. 42099 records in RAM.
+INFO	2018-09-18 19:25:31	MarkDuplicates	Read   236,000,000 records.  Elapsed time: 00:27:36s.  Time for last 1,000,000:    5s.  Last read position: chr17:33,634,546
+INFO	2018-09-18 19:25:31	MarkDuplicates	Tracking 296940 as yet unmatched pairs. 33300 records in RAM.
+INFO	2018-09-18 19:25:38	MarkDuplicates	Read   237,000,000 records.  Elapsed time: 00:27:43s.  Time for last 1,000,000:    7s.  Last read position: chr17:44,856,358
+INFO	2018-09-18 19:25:38	MarkDuplicates	Tracking 290274 as yet unmatched pairs. 25202 records in RAM.
+INFO	2018-09-18 19:25:44	MarkDuplicates	Read   238,000,000 records.  Elapsed time: 00:27:49s.  Time for last 1,000,000:    5s.  Last read position: chr17:53,755,661
+INFO	2018-09-18 19:25:44	MarkDuplicates	Tracking 285520 as yet unmatched pairs. 19258 records in RAM.
+INFO	2018-09-18 19:25:55	MarkDuplicates	Read   239,000,000 records.  Elapsed time: 00:28:00s.  Time for last 1,000,000:   10s.  Last read position: chr17:62,123,574
+INFO	2018-09-18 19:25:55	MarkDuplicates	Tracking 280166 as yet unmatched pairs. 12681 records in RAM.
+INFO	2018-09-18 19:26:01	MarkDuplicates	Read   240,000,000 records.  Elapsed time: 00:28:06s.  Time for last 1,000,000:    5s.  Last read position: chr17:70,961,832
+INFO	2018-09-18 19:26:01	MarkDuplicates	Tracking 275694 as yet unmatched pairs. 7158 records in RAM.
+INFO	2018-09-18 19:26:08	MarkDuplicates	Read   241,000,000 records.  Elapsed time: 00:28:13s.  Time for last 1,000,000:    7s.  Last read position: chr17:80,795,921
+INFO	2018-09-18 19:26:08	MarkDuplicates	Tracking 269948 as yet unmatched pairs. 159 records in RAM.
+INFO	2018-09-18 19:26:15	MarkDuplicates	Read   242,000,000 records.  Elapsed time: 00:28:20s.  Time for last 1,000,000:    7s.  Last read position: chr18:8,010,788
+INFO	2018-09-18 19:26:15	MarkDuplicates	Tracking 269010 as yet unmatched pairs. 37282 records in RAM.
+INFO	2018-09-18 19:26:21	MarkDuplicates	Read   243,000,000 records.  Elapsed time: 00:28:26s.  Time for last 1,000,000:    5s.  Last read position: chr18:18,517,002
+INFO	2018-09-18 19:26:21	MarkDuplicates	Tracking 287578 as yet unmatched pairs. 53856 records in RAM.
+INFO	2018-09-18 19:26:28	MarkDuplicates	Read   244,000,000 records.  Elapsed time: 00:28:33s.  Time for last 1,000,000:    7s.  Last read position: chr18:24,041,864
+INFO	2018-09-18 19:26:28	MarkDuplicates	Tracking 253402 as yet unmatched pairs. 16977 records in RAM.
+INFO	2018-09-18 19:26:34	MarkDuplicates	Read   245,000,000 records.  Elapsed time: 00:28:39s.  Time for last 1,000,000:    5s.  Last read position: chr18:34,801,952
+INFO	2018-09-18 19:26:34	MarkDuplicates	Tracking 250318 as yet unmatched pairs. 13334 records in RAM.
+INFO	2018-09-18 19:26:45	MarkDuplicates	Read   246,000,000 records.  Elapsed time: 00:28:50s.  Time for last 1,000,000:   10s.  Last read position: chr18:48,528,660
+INFO	2018-09-18 19:26:45	MarkDuplicates	Tracking 246656 as yet unmatched pairs. 8984 records in RAM.
+INFO	2018-09-18 19:26:50	MarkDuplicates	Read   247,000,000 records.  Elapsed time: 00:28:56s.  Time for last 1,000,000:    5s.  Last read position: chr18:61,757,996
+INFO	2018-09-18 19:26:50	MarkDuplicates	Tracking 242878 as yet unmatched pairs. 4517 records in RAM.
+INFO	2018-09-18 19:26:57	MarkDuplicates	Read   248,000,000 records.  Elapsed time: 00:29:02s.  Time for last 1,000,000:    6s.  Last read position: chr18:74,442,074
+INFO	2018-09-18 19:26:57	MarkDuplicates	Tracking 239910 as yet unmatched pairs. 1034 records in RAM.
+INFO	2018-09-18 19:27:05	MarkDuplicates	Read   249,000,000 records.  Elapsed time: 00:29:10s.  Time for last 1,000,000:    7s.  Last read position: chr19:10,866,817
+INFO	2018-09-18 19:27:05	MarkDuplicates	Tracking 231996 as yet unmatched pairs. 47237 records in RAM.
+INFO	2018-09-18 19:27:11	MarkDuplicates	Read   250,000,000 records.  Elapsed time: 00:29:16s.  Time for last 1,000,000:    6s.  Last read position: chr19:24,393,815
+INFO	2018-09-18 19:27:11	MarkDuplicates	Tracking 223122 as yet unmatched pairs. 37058 records in RAM.
+INFO	2018-09-18 19:27:21	MarkDuplicates	Read   251,000,000 records.  Elapsed time: 00:29:26s.  Time for last 1,000,000:    9s.  Last read position: chr19:28,970,789
+INFO	2018-09-18 19:27:21	MarkDuplicates	Tracking 208704 as yet unmatched pairs. 20780 records in RAM.
+INFO	2018-09-18 19:27:27	MarkDuplicates	Read   252,000,000 records.  Elapsed time: 00:29:32s.  Time for last 1,000,000:    5s.  Last read position: chr19:39,386,186
+INFO	2018-09-18 19:27:27	MarkDuplicates	Tracking 202330 as yet unmatched pairs. 13624 records in RAM.
+INFO	2018-09-18 19:27:37	MarkDuplicates	Read   253,000,000 records.  Elapsed time: 00:29:42s.  Time for last 1,000,000:    9s.  Last read position: chr19:53,643,900
+INFO	2018-09-18 19:27:37	MarkDuplicates	Tracking 193914 as yet unmatched pairs. 4072 records in RAM.
+INFO	2018-09-18 19:27:43	MarkDuplicates	Read   254,000,000 records.  Elapsed time: 00:29:48s.  Time for last 1,000,000:    6s.  Last read position: chr20:7,343,054
+INFO	2018-09-18 19:27:43	MarkDuplicates	Tracking 186846 as yet unmatched pairs. 34252 records in RAM.
+INFO	2018-09-18 19:27:54	MarkDuplicates	Read   255,000,000 records.  Elapsed time: 00:29:59s.  Time for last 1,000,000:   10s.  Last read position: chr20:19,267,630
+INFO	2018-09-18 19:27:54	MarkDuplicates	Tracking 183242 as yet unmatched pairs. 30310 records in RAM.
+INFO	2018-09-18 19:27:59	MarkDuplicates	Read   256,000,000 records.  Elapsed time: 00:30:05s.  Time for last 1,000,000:    5s.  Last read position: chr20:31,062,902
+INFO	2018-09-18 19:27:59	MarkDuplicates	Tracking 174000 as yet unmatched pairs. 19455 records in RAM.
+INFO	2018-09-18 19:28:05	MarkDuplicates	Read   257,000,000 records.  Elapsed time: 00:30:10s.  Time for last 1,000,000:    5s.  Last read position: chr20:40,970,465
+INFO	2018-09-18 19:28:05	MarkDuplicates	Tracking 167894 as yet unmatched pairs. 12751 records in RAM.
+INFO	2018-09-18 19:28:15	MarkDuplicates	Read   258,000,000 records.  Elapsed time: 00:30:20s.  Time for last 1,000,000:    9s.  Last read position: chr20:51,287,057
+INFO	2018-09-18 19:28:15	MarkDuplicates	Tracking 161798 as yet unmatched pairs. 6106 records in RAM.
+INFO	2018-09-18 19:28:21	MarkDuplicates	Read   259,000,000 records.  Elapsed time: 00:30:26s.  Time for last 1,000,000:    5s.  Last read position: chr20:59,954,530
+INFO	2018-09-18 19:28:21	MarkDuplicates	Tracking 157594 as yet unmatched pairs. 1485 records in RAM.
+INFO	2018-09-18 19:28:31	MarkDuplicates	Read   260,000,000 records.  Elapsed time: 00:30:37s.  Time for last 1,000,000:   10s.  Last read position: chr21:11,096,497
+INFO	2018-09-18 19:28:31	MarkDuplicates	Tracking 148268 as yet unmatched pairs. 20168 records in RAM.
+INFO	2018-09-18 19:28:39	MarkDuplicates	Read   261,000,000 records.  Elapsed time: 00:30:44s.  Time for last 1,000,000:    7s.  Last read position: chr21:22,523,743
+INFO	2018-09-18 19:28:39	MarkDuplicates	Tracking 142892 as yet unmatched pairs. 14256 records in RAM.
+INFO	2018-09-18 19:28:44	MarkDuplicates	Read   262,000,000 records.  Elapsed time: 00:30:49s.  Time for last 1,000,000:    5s.  Last read position: chr21:31,576,320
+INFO	2018-09-18 19:28:44	MarkDuplicates	Tracking 139150 as yet unmatched pairs. 10274 records in RAM.
+INFO	2018-09-18 19:28:50	MarkDuplicates	Read   263,000,000 records.  Elapsed time: 00:30:55s.  Time for last 1,000,000:    6s.  Last read position: chr21:40,118,665
+INFO	2018-09-18 19:28:50	MarkDuplicates	Tracking 133894 as yet unmatched pairs. 4576 records in RAM.
+INFO	2018-09-18 19:28:58	MarkDuplicates	Read   264,000,000 records.  Elapsed time: 00:31:03s.  Time for last 1,000,000:    8s.  Last read position: chr22:16,374,044
+INFO	2018-09-18 19:28:58	MarkDuplicates	Tracking 129434 as yet unmatched pairs. 21139 records in RAM.
+INFO	2018-09-18 19:29:05	MarkDuplicates	Read   265,000,000 records.  Elapsed time: 00:31:10s.  Time for last 1,000,000:    6s.  Last read position: chr22:27,383,417
+INFO	2018-09-18 19:29:05	MarkDuplicates	Tracking 122340 as yet unmatched pairs. 13703 records in RAM.
+INFO	2018-09-18 19:29:11	MarkDuplicates	Read   266,000,000 records.  Elapsed time: 00:31:16s.  Time for last 1,000,000:    6s.  Last read position: chr22:40,762,679
+INFO	2018-09-18 19:29:11	MarkDuplicates	Tracking 114836 as yet unmatched pairs. 5757 records in RAM.
+INFO	2018-09-18 19:29:22	MarkDuplicates	Read   267,000,000 records.  Elapsed time: 00:31:27s.  Time for last 1,000,000:   11s.  Last read position: chrX:5,494,808
+INFO	2018-09-18 19:29:22	MarkDuplicates	Tracking 107108 as yet unmatched pairs. 81819 records in RAM.
+INFO	2018-09-18 19:29:30	MarkDuplicates	Read   268,000,000 records.  Elapsed time: 00:31:35s.  Time for last 1,000,000:    7s.  Last read position: chrX:15,854,967
+INFO	2018-09-18 19:29:30	MarkDuplicates	Tracking 103086 as yet unmatched pairs. 77752 records in RAM.
+INFO	2018-09-18 19:29:36	MarkDuplicates	Read   269,000,000 records.  Elapsed time: 00:31:41s.  Time for last 1,000,000:    5s.  Last read position: chrX:25,969,824
+INFO	2018-09-18 19:29:36	MarkDuplicates	Tracking 97588 as yet unmatched pairs. 72208 records in RAM.
+INFO	2018-09-18 19:29:41	MarkDuplicates	Read   270,000,000 records.  Elapsed time: 00:31:46s.  Time for last 1,000,000:    5s.  Last read position: chrX:35,841,203
+INFO	2018-09-18 19:29:41	MarkDuplicates	Tracking 93750 as yet unmatched pairs. 68324 records in RAM.
+INFO	2018-09-18 19:29:49	MarkDuplicates	Read   271,000,000 records.  Elapsed time: 00:31:54s.  Time for last 1,000,000:    7s.  Last read position: chrX:45,971,285
+INFO	2018-09-18 19:29:49	MarkDuplicates	Tracking 88596 as yet unmatched pairs. 63143 records in RAM.
+INFO	2018-09-18 19:29:56	MarkDuplicates	Read   272,000,000 records.  Elapsed time: 00:32:01s.  Time for last 1,000,000:    7s.  Last read position: chrX:56,507,383
+INFO	2018-09-18 19:29:56	MarkDuplicates	Tracking 82094 as yet unmatched pairs. 56591 records in RAM.
+INFO	2018-09-18 19:30:02	MarkDuplicates	Read   273,000,000 records.  Elapsed time: 00:32:07s.  Time for last 1,000,000:    6s.  Last read position: chrX:61,842,697
+INFO	2018-09-18 19:30:02	MarkDuplicates	Tracking 68054 as yet unmatched pairs. 42423 records in RAM.
+INFO	2018-09-18 19:30:12	MarkDuplicates	Read   274,000,000 records.  Elapsed time: 00:32:17s.  Time for last 1,000,000:   10s.  Last read position: chrX:71,623,253
+INFO	2018-09-18 19:30:12	MarkDuplicates	Tracking 59160 as yet unmatched pairs. 33436 records in RAM.
+INFO	2018-09-18 19:30:20	MarkDuplicates	Read   275,000,000 records.  Elapsed time: 00:32:25s.  Time for last 1,000,000:    7s.  Last read position: chrX:81,827,168
+INFO	2018-09-18 19:30:20	MarkDuplicates	Tracking 54626 as yet unmatched pairs. 28850 records in RAM.
+INFO	2018-09-18 19:30:25	MarkDuplicates	Read   276,000,000 records.  Elapsed time: 00:32:30s.  Time for last 1,000,000:    5s.  Last read position: chrX:92,484,207
+INFO	2018-09-18 19:30:25	MarkDuplicates	Tracking 51172 as yet unmatched pairs. 25337 records in RAM.
+INFO	2018-09-18 19:30:31	MarkDuplicates	Read   277,000,000 records.  Elapsed time: 00:32:36s.  Time for last 1,000,000:    5s.  Last read position: chrX:104,779,859
+INFO	2018-09-18 19:30:31	MarkDuplicates	Tracking 46812 as yet unmatched pairs. 20928 records in RAM.
+INFO	2018-09-18 19:30:39	MarkDuplicates	Read   278,000,000 records.  Elapsed time: 00:32:44s.  Time for last 1,000,000:    7s.  Last read position: chrX:118,868,444
+INFO	2018-09-18 19:30:39	MarkDuplicates	Tracking 39750 as yet unmatched pairs. 13788 records in RAM.
+INFO	2018-09-18 19:30:46	MarkDuplicates	Read   279,000,000 records.  Elapsed time: 00:32:51s.  Time for last 1,000,000:    7s.  Last read position: chrX:133,068,764
+INFO	2018-09-18 19:30:46	MarkDuplicates	Tracking 34484 as yet unmatched pairs. 8455 records in RAM.
+INFO	2018-09-18 19:30:51	MarkDuplicates	Read   280,000,000 records.  Elapsed time: 00:32:57s.  Time for last 1,000,000:    5s.  Last read position: chrX:147,444,240
+INFO	2018-09-18 19:30:51	MarkDuplicates	Tracking 28866 as yet unmatched pairs. 2775 records in RAM.
+INFO	2018-09-18 19:31:02	MarkDuplicates	Read   281,000,000 records.  Elapsed time: 00:33:08s.  Time for last 1,000,000:   10s.  Last read position: chrY:13,458,455
+INFO	2018-09-18 19:31:02	MarkDuplicates	Tracking 23768 as yet unmatched pairs. 23768 records in RAM.
+INFO	2018-09-18 19:31:07	MarkDuplicates	Read 281876434 records. 0 pairs never matched.
+INFO	2018-09-18 19:31:09	MarkDuplicates	After buildSortedReadEndLists freeMemory: 1041469368; totalMemory: 1052246016; maxMemory: 1052246016
+INFO	2018-09-18 19:31:09	MarkDuplicates	Will retain up to 32882688 duplicate indices before spilling to disk.
+INFO	2018-09-18 19:31:09	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2018-09-18 19:31:09	SortingCollection	Creating merging iterator from 41 files
+INFO	2018-09-18 19:31:52	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2018-09-18 19:31:52	SortingCollection	Creating merging iterator from 81 files
+INFO	2018-09-18 19:33:04	MarkDuplicates	Sorting list of duplicate records.
+INFO	2018-09-18 19:33:05	MarkDuplicates	After generateDuplicateIndexes freeMemory: 798986592; totalMemory: 1073217536; maxMemory: 1073217536
+INFO	2018-09-18 19:33:05	MarkDuplicates	Marking 11096994 records as duplicates.
+INFO	2018-09-18 19:33:05	MarkDuplicates	Found 552799 optical duplicate clusters.
+INFO	2018-09-18 19:33:05	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2018-09-18 19:34:01	MarkDuplicates	Written    10,000,000 records.  Elapsed time: 00:00:56s.  Time for last 10,000,000:   56s.  Last read position: chr1:98,072,689
+INFO	2018-09-18 19:34:58	MarkDuplicates	Written    20,000,000 records.  Elapsed time: 00:01:53s.  Time for last 10,000,000:   56s.  Last read position: chr1:194,673,438
+INFO	2018-09-18 19:35:53	MarkDuplicates	Written    30,000,000 records.  Elapsed time: 00:02:48s.  Time for last 10,000,000:   55s.  Last read position: chr2:53,288,899
+INFO	2018-09-18 19:36:50	MarkDuplicates	Written    40,000,000 records.  Elapsed time: 00:03:45s.  Time for last 10,000,000:   56s.  Last read position: chr2:153,299,739
+INFO	2018-09-18 19:37:45	MarkDuplicates	Written    50,000,000 records.  Elapsed time: 00:04:40s.  Time for last 10,000,000:   55s.  Last read position: chr3:29,720,862
+INFO	2018-09-18 19:38:40	MarkDuplicates	Written    60,000,000 records.  Elapsed time: 00:05:35s.  Time for last 10,000,000:   55s.  Last read position: chr3:139,376,172
+INFO	2018-09-18 19:39:35	MarkDuplicates	Written    70,000,000 records.  Elapsed time: 00:06:30s.  Time for last 10,000,000:   54s.  Last read position: chr4:43,536,031
+INFO	2018-09-18 19:40:31	MarkDuplicates	Written    80,000,000 records.  Elapsed time: 00:07:26s.  Time for last 10,000,000:   56s.  Last read position: chr4:146,453,464
+INFO	2018-09-18 19:41:26	MarkDuplicates	Written    90,000,000 records.  Elapsed time: 00:08:21s.  Time for last 10,000,000:   55s.  Last read position: chr5:61,059,721
+INFO	2018-09-18 19:42:21	MarkDuplicates	Written   100,000,000 records.  Elapsed time: 00:09:16s.  Time for last 10,000,000:   55s.  Last read position: chr5:179,059,318
+INFO	2018-09-18 19:43:16	MarkDuplicates	Written   110,000,000 records.  Elapsed time: 00:10:11s.  Time for last 10,000,000:   54s.  Last read position: chr6:100,387,836
+INFO	2018-09-18 19:44:12	MarkDuplicates	Written   120,000,000 records.  Elapsed time: 00:11:06s.  Time for last 10,000,000:   55s.  Last read position: chr7:57,844,758
+INFO	2018-09-18 19:45:07	MarkDuplicates	Written   130,000,000 records.  Elapsed time: 00:12:02s.  Time for last 10,000,000:   55s.  Last read position: chr7:143,821,984
+INFO	2018-09-18 19:46:02	MarkDuplicates	Written   140,000,000 records.  Elapsed time: 00:12:57s.  Time for last 10,000,000:   55s.  Last read position: chr8:97,681,047
+INFO	2018-09-18 19:46:59	MarkDuplicates	Written   150,000,000 records.  Elapsed time: 00:13:54s.  Time for last 10,000,000:   56s.  Last read position: chr9:75,664,059
+INFO	2018-09-18 19:47:55	MarkDuplicates	Written   160,000,000 records.  Elapsed time: 00:14:50s.  Time for last 10,000,000:   55s.  Last read position: chr10:42,377,361
+INFO	2018-09-18 19:48:51	MarkDuplicates	Written   170,000,000 records.  Elapsed time: 00:15:46s.  Time for last 10,000,000:   56s.  Last read position: chr11:7,108,192
+INFO	2018-09-18 19:49:47	MarkDuplicates	Written   180,000,000 records.  Elapsed time: 00:16:42s.  Time for last 10,000,000:   55s.  Last read position: chr11:121,919,557
+INFO	2018-09-18 19:50:43	MarkDuplicates	Written   190,000,000 records.  Elapsed time: 00:17:38s.  Time for last 10,000,000:   55s.  Last read position: chr12:82,765,393
+INFO	2018-09-18 19:51:38	MarkDuplicates	Written   200,000,000 records.  Elapsed time: 00:18:33s.  Time for last 10,000,000:   55s.  Last read position: chr13:86,597,987
+INFO	2018-09-18 19:52:35	MarkDuplicates	Written   210,000,000 records.  Elapsed time: 00:19:29s.  Time for last 10,000,000:   56s.  Last read position: chr15:21,066,120
+INFO	2018-09-18 19:53:32	MarkDuplicates	Written   220,000,000 records.  Elapsed time: 00:20:26s.  Time for last 10,000,000:   57s.  Last read position: chr16:46,392,367
+INFO	2018-09-18 19:54:28	MarkDuplicates	Written   230,000,000 records.  Elapsed time: 00:21:23s.  Time for last 10,000,000:   56s.  Last read position: chr17:64,536,093
+INFO	2018-09-18 19:55:25	MarkDuplicates	Written   240,000,000 records.  Elapsed time: 00:22:19s.  Time for last 10,000,000:   56s.  Last read position: chr19:21,956,888
+INFO	2018-09-18 19:56:22	MarkDuplicates	Written   250,000,000 records.  Elapsed time: 00:23:17s.  Time for last 10,000,000:   57s.  Last read position: chr21:16,286,112
+INFO	2018-09-18 19:57:18	MarkDuplicates	Written   260,000,000 records.  Elapsed time: 00:24:12s.  Time for last 10,000,000:   55s.  Last read position: chrX:42,434,273
+INFO	2018-09-18 19:58:14	MarkDuplicates	Written   270,000,000 records.  Elapsed time: 00:25:09s.  Time for last 10,000,000:   56s.  Last read position: chrY:13,459,047
+INFO	2018-09-18 19:58:28	MarkDuplicates	Before output close freeMemory: 1060600536; totalMemory: 1072168960; maxMemory: 1072168960
+INFO	2018-09-18 19:58:28	MarkDuplicates	After output close freeMemory: 1060600536; totalMemory: 1072168960; maxMemory: 1072168960
+[Tue Sep 18 19:58:28 CEST 2018] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 60.56 minutes.
+Runtime.totalMemory()=1072168960
+Java memory size is set to 20G
+Launching application...
+
+QualiMap v.2.2.2-dev
+Built on 2017-08-28 08:37
+
+Selected tool: bamqc
+
+ERROR: input mapping file not found
+
+usage: qualimap bamqc -bam <arg> [-c] [-gd <arg>] [-gff <arg>] [-hm <arg>] [-ip]
+       [-nr <arg>] [-nt <arg>] [-nw <arg>] [-oc <arg>] [-os] [-outdir <arg>]
+       [-outfile <arg>] [-outformat <arg>] [-p <arg>] [-sd] [-sdmode <arg>]
+ -bam <arg>                           Input mapping file in BAM format
+ -c,--paint-chromosome-limits         Paint chromosome limits inside charts
+ -gd,--genome-gc-distr <arg>          Species to compare with genome GC
+                                      distribution. Possible values: HUMAN -
+                                      hg19; MOUSE - mm9(default), mm10
+ -gff,--feature-file <arg>            Feature file with regions of interest in
+                                      GFF/GTF or BED format
+ -hm <arg>                            Minimum size for a homopolymer to be
+                                      considered in indel analysis (default is
+                                      3)
+ -ip,--collect-overlap-pairs          Activate this option to collect statistics
+                                      of overlapping paired-end reads
+ -nr <arg>                            Number of reads analyzed in a chunk
+                                      (default is 1000)
+ -nt <arg>                            Number of threads (default is 24)
+ -nw <arg>                            Number of windows (default is 400)
+ -oc,--output-genome-coverage <arg>   File to save per base non-zero coverage.
+                                      Warning: large files are expected for
+                                      large genomes
+ -os,--outside-stats                  Report information for the regions outside
+                                      those defined by feature-file  (ignored
+                                      when -gff option is not set)
+ -outdir <arg>                        Output folder for HTML report and raw
+                                      data.
+ -outfile <arg>                       Output file for PDF report (default value
+                                      is report.pdf).
+ -outformat <arg>                     Format of the output report (PDF, HTML or
+                                      both PDF:HTML, default is HTML).
+ -p,--sequencing-protocol <arg>       Sequencing library protocol:
+                                      strand-specific-forward,
+                                      strand-specific-reverse or
+                                      non-strand-specific (default)
+ -sd,--skip-duplicated                Activate this option to skip duplicated
+                                      alignments from the analysis. If the
+                                      duplicates are not flagged in the BAM
+                                      file, then they will be detected by
+                                      Qualimap and can be selected for skipping.
+ -sdmode,--skip-dup-mode <arg>        Specific type of duplicated alignments to
+                                      skip (if this option is activated).
+                                      0 : only flagged duplicates (default)
+                                      1 : only estimated by Qualimap
+                                      2 : both flagged and estimated
+
+
+

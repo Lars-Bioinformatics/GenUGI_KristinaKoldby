@@ -1,0 +1,25 @@
+Dec 18 16:05:38 ..... started STAR run
+Dec 18 16:05:38 ..... loading genome
+Dec 18 16:05:48 ..... processing annotations GTF
+Dec 18 16:06:01 ..... inserting junctions into the genome indices
+Dec 18 16:06:32 ..... started mapping
+Dec 18 17:14:42 ..... started sorting BAM
+[W::sam_hdr_read] bgzf_check_EOF: Invalid argument
+[E::bam_hdr_read] invalid BAM binary header
+[W::sam_hdr_read] bgzf_check_EOF: Invalid argument
+[E::bam_hdr_read] invalid BAM binary header
+[W::sam_hdr_read] bgzf_check_EOF: Invalid argument
+[E::bam_hdr_read] invalid BAM binary header
+[W::sam_hdr_read] bgzf_check_EOF: Invalid argument
+[E::bam_hdr_read] invalid BAM binary header
+[W::sam_hdr_read] bgzf_check_EOF: Invalid argument
+[E::bam_hdr_read] invalid BAM binary header
+[W::bam_hdr_read] EOF marker is absent. The input is probably truncated.
+[bam_cat] WARNING: Unexpected block structure in file 'C3_STARtmp//BAMsort//b45'. Possible output corruption.
+[W::bam_hdr_read] EOF marker is absent. The input is probably truncated.
+[bam_cat] WARNING: Unexpected block structure in file 'C3_STARtmp//BAMsort//b46'. Possible output corruption.
+[W::bam_hdr_read] EOF marker is absent. The input is probably truncated.
+[bam_cat] WARNING: Unexpected block structure in file 'C3_STARtmp//BAMsort//b47'. Possible output corruption.
+[W::bam_hdr_read] EOF marker is absent. The input is probably truncated.
+[bam_cat] WARNING: Unexpected block structure in file 'C3_STARtmp//BAMsort//b48'. Possible output corruption.
+Dec 18 21:05:22 ..... finished successfully

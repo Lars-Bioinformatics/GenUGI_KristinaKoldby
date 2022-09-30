@@ -1,0 +1,34 @@
+MER="/data/mark/tools/Meerkat"
+DAT="/data/mark/tools/Meerkat/data"
+BWA="/data/mark/tools/bwa062"
+BWA_2="/data/mark/tools/bwa-0.7.12"
+SAM="/data/mark/tools/samtools"
+BLAST="/data/mark/tools/blast-2.2.24/bin"
+REF="/data/mark/tools/ref"
+
+DAT2="/data/mark/data/genom14"
+
+$BWA_2/bwa mem -t 4 -M -R '@RG\tID:seq1.lib.run\tLB:seq1.lib\tPL:ILLUMINA\tSM:seq1' $REF/hg19.fa $DAT2/anne_genome14_R1_001.fastq $DAT2/anne_genome14_R1_001.fastq > $DAT/anne14.sam
+
+$SAM/samtools view -bS $DAT/anne14.sam -o $DAT/anne14.bam 
+
+$SAM/samtools sort $DAT/anne14.bam $DAT/anne14.sort.bam 
+
+$SAM/samtools index $DAT/anne14.sort.bam
+
+#### BAM is properly sorted and that optical duplicates are marked in the bam file.
+
+java -jar $PICARD/MarkDuplicates.jar INPUT=$DAT/anne14.sort.bam OUTPUT=$DAT/anne14.sorted.nodup.bam METRICS_FILE=sample.dup.metrics VALIDATION_STRINGENCY=LENIENT
+
+
+perl $MER/scripts/pre_process.pl -b $DAT/sample.sorted.nodup.bam -I $REF/hg19.fa -A $REF/hg19.fa.fai -W $BWA -S $SAM -t 24 -s 20 -k 1500 -q 15
+
+perl $MER/scripts/meerkat.pl -b $DAT/sample.sorted.nodup.bam -F $REF -W $BWA -B $BLAST -S $SAM -t 24 -u -s 20 -d 5 -p5 -o 3
+
+perl $MER/scripts/mechanism.pl -b $RAP/sample.sorted.nodup.bam -R $MER/rmsk-hg19.txt
+
+perl $MER/scripts/somatic_sv.pl -i $RAP/sample.sorted.nodup.variants -o $RAP/somatic_filtered.sample.sorted.nodup.variants
+
+perl $MER/scripts/meerkat2vcf.pl -i $RAP/somatic_filtered.sample.sorted.nodup.variants -H /data/mark/tools/Meerkat/Meerkat.example/headerfile -F /data/mark/tools/ref/hg19.fasta -o $RAP/somatic_filtered.sample.sorted.nodup.variants.vcf
+
+perl $MER/scripts/fusions.pl -i $RAP/somatic_filtered.sample.sorted.nodup.variant -G /data/mark/tools/RAPTR-SV/genes.bed

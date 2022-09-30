@@ -1,0 +1,9 @@
+
+gzip: /gpfs/gss1/work/sduhumac/data/jeanette/G56-sampleD9_rnaseq_HGTHHDSXX_R1.fastq.gz: not in gzip format
+Dec 19 11:13:32 ..... started STAR run
+Dec 19 11:13:32 ..... loading genome
+Dec 19 11:13:42 ..... processing annotations GTF
+Dec 19 11:13:54 ..... inserting junctions into the genome indices
+Dec 19 11:14:26 ..... started mapping
+Dec 19 11:14:27 ..... started sorting BAM
+Dec 19 11:14:27 ..... finished successfully

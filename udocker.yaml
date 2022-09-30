@@ -1,0 +1,5 @@
+channels:
+    - bioconda
+dependencies:
+    - python=2.7.17
+    # - udocker=1.1.4 # Only exist in version 1.1.1 on conda

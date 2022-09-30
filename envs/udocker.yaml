@@ -1,0 +1,4 @@
+channels:
+  - bioconda
+dependencies:
+  - udocker=1.1.4

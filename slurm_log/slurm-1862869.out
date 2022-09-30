@@ -1,0 +1,56 @@
+java -Djava.library.path=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/jni/ -ea -Xmx20g -Xms20g -cp /gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/current/ jgi.BBDukF -Xmx20g in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_R1.fastq in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_R2.fastq out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa ktrim=r ktrim=l k=23 mink=11 hdist=1 tpe tbo qtrim=rl trimq=10 maq=10 minlen=25
+Executing jgi.BBDukF [-Xmx20g, in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_R1.fastq, in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_R2.fastq, out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq, out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh013390_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq, ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa, ktrim=r, ktrim=l, k=23, mink=11, hdist=1, tpe, tbo, qtrim=rl, trimq=10, maq=10, minlen=25]
+
+BBDuk version 36.32
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa'
+	at align2.Tools.testInputFiles(Tools.java:404)
+	at jgi.BBDukF.<init>(BBDukF.java:724)
+	at jgi.BBDukF.main(BBDukF.java:66)
+java -Djava.library.path=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/jni/ -ea -Xmx20g -Xms20g -cp /gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/current/ jgi.BBDukF -Xmx20g in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh025073_illumina-truseq-genome_HLYWNBGXY_R1.fastq in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh025073_illumina-truseq-genome_HLYWNBGXY_R2.fastq out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh025073_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh025073_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa ktrim=r ktrim=l k=23 mink=11 hdist=1 tpe tbo qtrim=rl trimq=10 maq=10 minlen=25
+Executing jgi.BBDukF [-Xmx20g, in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh025073_illumina-truseq-genome_HLYWNBGXY_R1.fastq, in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh025073_illumina-truseq-genome_HLYWNBGXY_R2.fastq, out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh025073_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq, out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh025073_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq, ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa, ktrim=r, ktrim=l, k=23, mink=11, hdist=1, tpe, tbo, qtrim=rl, trimq=10, maq=10, minlen=25]
+
+BBDuk version 36.32
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa'
+	at align2.Tools.testInputFiles(Tools.java:404)
+	at jgi.BBDukF.<init>(BBDukF.java:724)
+	at jgi.BBDukF.main(BBDukF.java:66)
+java -Djava.library.path=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/jni/ -ea -Xmx20g -Xms20g -cp /gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/current/ jgi.BBDukF -Xmx20g in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh026289_illumina-truseq-genome_HLYWNBGXY_R1.fastq in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh026289_illumina-truseq-genome_HLYWNBGXY_R2.fastq out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh026289_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh026289_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa ktrim=r ktrim=l k=23 mink=11 hdist=1 tpe tbo qtrim=rl trimq=10 maq=10 minlen=25
+Executing jgi.BBDukF [-Xmx20g, in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh026289_illumina-truseq-genome_HLYWNBGXY_R1.fastq, in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh026289_illumina-truseq-genome_HLYWNBGXY_R2.fastq, out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh026289_illumina-truseq-genome_HLYWNBGXY_clean_R1.fastq, out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-16ouh026289_illumina-truseq-genome_HLYWNBGXY_clean_R2.fastq, ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa, ktrim=r, ktrim=l, k=23, mink=11, hdist=1, tpe, tbo, qtrim=rl, trimq=10, maq=10, minlen=25]
+
+BBDuk version 36.32
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa'
+	at align2.Tools.testInputFiles(Tools.java:404)
+	at jgi.BBDukF.<init>(BBDukF.java:724)
+	at jgi.BBDukF.main(BBDukF.java:66)
+java -Djava.library.path=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/jni/ -ea -Xmx20g -Xms20g -cp /gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/current/ jgi.BBDukF -Xmx20g in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs1_illumina-truseq-genome_HY35GBGXY_R1.fastq in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs1_illumina-truseq-genome_HY35GBGXY_R2.fastq out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs1_illumina-truseq-genome_HY35GBGXY_clean_R1.fastq out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs1_illumina-truseq-genome_HY35GBGXY_clean_R2.fastq ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa ktrim=r ktrim=l k=23 mink=11 hdist=1 tpe tbo qtrim=rl trimq=10 maq=10 minlen=25
+Executing jgi.BBDukF [-Xmx20g, in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs1_illumina-truseq-genome_HY35GBGXY_R1.fastq, in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs1_illumina-truseq-genome_HY35GBGXY_R2.fastq, out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs1_illumina-truseq-genome_HY35GBGXY_clean_R1.fastq, out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs1_illumina-truseq-genome_HY35GBGXY_clean_R2.fastq, ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa, ktrim=r, ktrim=l, k=23, mink=11, hdist=1, tpe, tbo, qtrim=rl, trimq=10, maq=10, minlen=25]
+
+BBDuk version 36.32
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa'
+	at align2.Tools.testInputFiles(Tools.java:404)
+	at jgi.BBDukF.<init>(BBDukF.java:724)
+	at jgi.BBDukF.main(BBDukF.java:66)
+java -Djava.library.path=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/jni/ -ea -Xmx20g -Xms20g -cp /gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/opt/bbmap-36.32/current/ jgi.BBDukF -Xmx20g in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs2_illumina-truseq-genome_HY22CBGXY_R1.fastq in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs2_illumina-truseq-genome_HY22CBGXY_R2.fastq out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs2_illumina-truseq-genome_HY22CBGXY_clean_R1.fastq out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs2_illumina-truseq-genome_HY22CBGXY_clean_R2.fastq ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa ktrim=r ktrim=l k=23 mink=11 hdist=1 tpe tbo qtrim=rl trimq=10 maq=10 minlen=25
+Executing jgi.BBDukF [-Xmx20g, in1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs2_illumina-truseq-genome_HY22CBGXY_R1.fastq, in2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs2_illumina-truseq-genome_HY22CBGXY_R2.fastq, out1=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs2_illumina-truseq-genome_HY22CBGXY_clean_R1.fastq, out2=//gpfs/gss1/work/sduhumac/kristina/data/genova/tumor_blood/G35-kbs2_illumina-truseq-genome_HY22CBGXY_clean_R2.fastq, ref=/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa, ktrim=r, ktrim=l, k=23, mink=11, hdist=1, tpe, tbo, qtrim=rl, trimq=10, maq=10, minlen=25]
+
+BBDuk version 36.32
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/gpfs/gss1/work/sduhumac/tools/pkgs/bbmap-36.32-0/bin/resources/adapters.fa'
+	at align2.Tools.testInputFiles(Tools.java:404)
+	at jgi.BBDukF.<init>(BBDukF.java:724)
+	at jgi.BBDukF.main(BBDukF.java:66)
+/var/spool/slurm//job1862869/slurm_script: line 37: /gpfs/gss1/work/sduhumac/tools/pkgs/bwa-0.7.15-0/bin: Is a directory
+/var/spool/slurm//job1862869/slurm_script: line 40: /gpfs/gss1/work/sduhumac/tools/pkgs/samtools-1.3.1-4/bin: Is a directory
+/var/spool/slurm//job1862869/slurm_script: line 44: /gpfs/gss1/work/sduhumac/tools/pkgs/samtools-1.3.1-4/bin: Is a directory
+/var/spool/slurm//job1862869/slurm_script: line 46: /gpfs/gss1/work/sduhumac/tools/pkgs/samtools-1.3.1-4/bin: Is a directory
+Error: Unable to access jarfile /gpfs/gss1/work/sduhumac/tools/pkgs/picard-2.7.1-py35_0/bin/MarkDuplicates.jar
+/var/spool/slurm//job1862869/slurm_script: line 50: /gpfs/gss1/work/sduhumac/tools/pkgs/samtools-1.3.1-4/bin: Is a directory
+rm: cannot remove ‘/gpfs/gss1/work/sduhumac/kristina/data/genova/output/*_sorted.bam’: No such file or directory
+rm: cannot remove ‘/gpfs/gss1/work/sduhumac/kristina/data/genova/output/*_sorted.bai’: No such file or directory
+/var/spool/slurm//job1862869/slurm_script: line 57: cpanm: command not found
+Can't open perl script "/gpfs/gss1/work/sduhumac/tools/pkgs/breakdancer-1.4.5-0/bin/bam2cfg.pl": No such file or directory
+Can't open perl script "/gpfs/gss1/work/sduhumac/tools/pkgs/breakdancer-1.4.5-0/bin/BreakDancerMax.pl": No such file or directory

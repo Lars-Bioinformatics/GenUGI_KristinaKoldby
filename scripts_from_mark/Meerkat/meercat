@@ -1,0 +1,20 @@
+MER="/data/mark/tools/Meerkat2"
+DAT="/data/mark/tools/Meerkat2/data"
+BWA="/data/mark/tools/bwa062"
+SAM="/data/mark/tools/samtools"
+BLAST="/data/mark/tools/blast-2.2.24/bin"
+REF="/data/mark/tools/ref"
+
+
+
+perl $MER/scripts/pre_process.pl -b $DAT/sample.sorted.nodup.bam -I $REF/hg19.fa -A $REF/hg19.fa.fai -W $BWA -S $SAM -t 24
+
+perl $MER/scripts/meerkat.pl -b $RAP/sample.sorted.nodup.bam -F $RAP/hg19.fa -W $BWA -B $BLAST -S $SAM -t 24
+
+perl $MER/scripts/mechanism.pl -b $RAP/sample.sorted.nodup.bam -R $MER/rmsk-hg19.txt
+
+perl $MER/scripts/somatic_sv.pl -i $RAP/sample.sorted.nodup.variants -o $RAP/somatic_filtered.sample.sorted.nodup.variants
+
+perl $MER/scripts/meerkat2vcf.pl -i $RAP/somatic_filtered.sample.sorted.nodup.variants -H /data/mark/tools/Meerkat/Meerkat.example/headerfile -F /data/mark/tools/ref/hg19.fasta -o $RAP/somatic_filtered.sample.sorted.nodup.variants.vcf
+
+perl $MER/scripts/fusions.pl -i $RAP/somatic_filtered.sample.sorted.nodup.variant -G /data/mark/tools/RAPTR-SV/genes.bed

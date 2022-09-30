@@ -1,0 +1,6 @@
+meerkat="/data/mark/tools/meerkat/scripts"
+bwa="/data/mark/tools/bwa-0.7.12"
+
+perl $meerkat/pre_process.pl -b example.sorted.bam -I $bwa/hg19.fa -A $bwa/hg19.fa.fai -W $bwa -S /opt/samtools/
+perl scripts/meerkat.pl -b example.sorted.bam -F /db/hg18/hg18_fasta/ -W /opt/bwa/ -B /opt/blast/bin/ -S /opt/samtools/
+perl scripts/mechanism.pl -b example.sorted.bam -R /db/hg18/rmsk-hg18.txt

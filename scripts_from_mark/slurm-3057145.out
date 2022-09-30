@@ -1,0 +1,5 @@
+
+EXITING because of FATAL ERROR: could not create output file: A3Log.out
+Check if the path A3 exists and you have permissions to write there
+
+Dec 18 11:36:23 ...... FATAL ERROR, exiting

@@ -1,0 +1,36 @@
++ echo /work/sduhumac/kristina/data/genova/plasma
+/work/sduhumac/kristina/data/genova/plasma
++ SAMPLEID=G35-4_illumina-truseq-genome_merged
++ SAMPLEID_1=G35-4_illumina-truseq-genome_H3WWJBGX2
++ SAMPLEID_2=G35-4_illumina-truseq-genome_HTKG2BGXY
++ OUTPUT=/scratch/sduhumac/kristina/data/genova/plasma/output
++ LOGFILE=/scratch/sduhumac/kristina/data/genova/plasma/output/logfiles/.txt
++ qualimap bamqc -bam /scratch/sduhumac/kristina/data/genova/plasma/output/G35-4_illumina-truseq-genome_merged_sorted_nodup.bam -nt 24 -c -sd -outdir /scratch/sduhumac/kristina/data/genova/plasma/output/qc/G35-4_illumina-truseq-genome_merged/ --java-mem-size=4G
+Java memory size is set to 4G
+Launching application...
+
+QualiMap v.2.2.2-dev
+Built on 2017-08-28 08:37
+
+Selected tool: bamqc
+Available memory (Mb): 32
+Max memory (Mb): 3817
+Tue Sep 25 13:43:35 CEST 2018		WARNING	Output folder already exists, the results will be saved there
+
+Starting bam qc....
+Loading sam header...
+Loading locator...
+Loading reference...
+Only flagged duplicate alignments will be skipped...
+Number of windows: 400, effective number of windows: 424
+Chunk of reads size: 1000
+Number of threads: 24
+Processed 50 out of 424 windows...
+Processed 100 out of 424 windows...
+Processed 150 out of 424 windows...
+Processed 200 out of 424 windows...
+Processed 250 out of 424 windows...
+
+WARNING: out of memory!
+Qualimap allows to set RAM size using special argument: --java-mem-size
+Check more details using --help command or read the manual.

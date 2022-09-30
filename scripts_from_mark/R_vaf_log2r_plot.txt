@@ -1,0 +1,33 @@
+files <- list.files(path="T:\\projekter\\G45-2016-Genugi\\VAF_LogR_plots\\test", pattern="*_passed.txt", full.names=TRUE, recursive=FALSE)
+lapply(files, function(x) {
+
+data<-as.matrix(read.table(x,header=TRUE, sep="\t"))
+
+xval<-as.numeric(data[,3])
+yval<-as.numeric(data[,4])
+
+tiff(paste(x,".tiff",sep=""))
+
+plot(xval,yval,xlab="AF",ylab="LOG2R",ylim=c(-3,3),pch=c(rep(18,length(xval))))
+abline(h=0,lwd=2)
+
+dev.off()
+
+rm(list=ls())
+
+})
+
+
+
+###,col=c(rep("red",length(xval)))
+###par(mfrow=c(2,2))
+
+setwd("T:\\projekter\\G45-2016-Genugi\\VAF_LogR_plots\\test")
+
+for i in *_passed.txt;
+do
+
+file=$(basename $i _passed.txt)
+echo "$file"
+
+done 

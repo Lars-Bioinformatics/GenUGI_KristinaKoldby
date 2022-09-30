@@ -1,0 +1,10 @@
+meerkat="/data/mark/tools/meerkat/scripts"
+bwa="/data/mark/tools/bwa-0.7.12"
+samtools="/data/mark/tools/samtools-1.2"
+blast="/data/mark/tools/ncbi-blast-2.2.30+/bin"
+
+
+perl $meerkat/pre_process.pl -b example.sorted.bam -I $bwa/hg19.fa -A $bwa/hg19.fa.fai -W $bwa -S $samtools 
+perl $meerkat/meerkat.pl -b example.sorted.bam -F $bwa/hg19.fa -W $bwa -B $blast -S $samtools
+perl $meerkat/mechanism.pl -b example.sorted.bam -R $meerkat/rmsk-hg19.txt
+
